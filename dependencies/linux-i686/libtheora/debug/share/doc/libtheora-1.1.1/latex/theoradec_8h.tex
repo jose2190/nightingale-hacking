@@ -1,0 +1,220 @@
+\section{theoradec.h File Reference}
+\label{theoradec_8h}\index{theoradec.h@{theoradec.h}}
+The {\tt libtheoradec} C decoding API. 
+
+{\tt \#include $<$stddef.h$>$}\par
+{\tt \#include $<$ogg/ogg.h$>$}\par
+{\tt \#include \char`\"{}codec.h\char`\"{}}\par
+\subsection*{Data Structures}
+\begin{CompactItemize}
+\item 
+struct \bf{th\_\-stripe\_\-callback}
+\begin{CompactList}\small\item\em The striped decode callback data to pass to \doxyref{TH\_\-DECCTL\_\-SET\_\-STRIPE\_\-CB}{p.}{theoradec_8h_c95cc9e109474b0fa4bb920ab2cfdf1e}. \item\end{CompactList}\end{CompactItemize}
+\subsection*{th\_\-decode\_\-ctl() codes}
+\label{theoradec_8h_decctlcodes}
+ These are the available request codes for \doxyref{th\_\-decode\_\-ctl()}{p.}{group__decfuncs_g1a8051958d75b1012573b6e3c8f670e1}. By convention, these are odd, to distinguish them from the \doxyref{encoder control codes}{p.}{theoraenc_8h_encctlcodes}. Keep any experimental or vendor-specific values above {\tt 0x8000}. \begin{CompactItemize}
+\item 
+\#define \bf{TH\_\-DECCTL\_\-GET\_\-PPLEVEL\_\-MAX}~(1)
+\begin{CompactList}\small\item\em Gets the maximum post-processing level. \item\end{CompactList}\item 
+\#define \bf{TH\_\-DECCTL\_\-SET\_\-PPLEVEL}~(3)
+\begin{CompactList}\small\item\em Sets the post-processing level. \item\end{CompactList}\item 
+\#define \bf{TH\_\-DECCTL\_\-SET\_\-GRANPOS}~(5)
+\begin{CompactList}\small\item\em Sets the granule position. \item\end{CompactList}\item 
+\#define \bf{TH\_\-DECCTL\_\-SET\_\-STRIPE\_\-CB}~(7)
+\begin{CompactList}\small\item\em Sets the striped decode callback function. \item\end{CompactList}\item 
+\#define \bf{TH\_\-DECCTL\_\-SET\_\-TELEMETRY\_\-MBMODE}~(9)
+\begin{CompactList}\small\item\em Enables telemetry and sets the macroblock display mode. \item\end{CompactList}\item 
+\#define \bf{TH\_\-DECCTL\_\-SET\_\-TELEMETRY\_\-MV}~(11)
+\begin{CompactList}\small\item\em Enables telemetry and sets the motion vector display mode. \item\end{CompactList}\item 
+\#define \bf{TH\_\-DECCTL\_\-SET\_\-TELEMETRY\_\-QI}~(13)
+\begin{CompactList}\small\item\em Enables telemetry and sets the adaptive quantization display mode. \item\end{CompactList}\item 
+\#define \bf{TH\_\-DECCTL\_\-SET\_\-TELEMETRY\_\-BITS}~(15)
+\begin{CompactList}\small\item\em Enables telemetry and sets the bitstream breakdown visualization mode. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Decoder state}
+The following data structures are opaque, and their contents are not publicly defined by this API. Referring to their internals directly is unsupported, and may break without warning. \begin{CompactItemize}
+\item 
+typedef \bf{th\_\-dec\_\-ctx} \bf{th\_\-dec\_\-ctx}
+\begin{CompactList}\small\item\em The decoder context. \item\end{CompactList}\item 
+typedef \bf{th\_\-setup\_\-info} \bf{th\_\-setup\_\-info}
+\begin{CompactList}\small\item\em Setup information. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Functions for decoding}
+You must link to {\tt libtheoradec} if you use any of the functions in this section.
+
+The functions are listed in the order they are used in a typical decode. The basic steps are:\begin{itemize}
+\item Parse the header packets by repeatedly calling \doxyref{th\_\-decode\_\-headerin()}{p.}{group__decfuncs_g006d01d36fbe64768c571e6a12b7fc50}.\item Allocate a \doxyref{th\_\-dec\_\-ctx}{p.}{theoradec_8h_843d70bb02563885a8d54b9c1a781729} handle with \doxyref{th\_\-decode\_\-alloc()}{p.}{group__decfuncs_g0ef07a9a97849054aa606c595a2d807e}.\item Call \doxyref{th\_\-setup\_\-free()}{p.}{group__decfuncs_gdef55431b68aaa59d0d7b32b2f118f27} to free any memory used for codec setup information.\item Perform any additional decoder configuration with \doxyref{th\_\-decode\_\-ctl()}{p.}{group__decfuncs_g1a8051958d75b1012573b6e3c8f670e1}.\item For each video data packet:\begin{itemize}
+\item Submit the packet to the decoder via \doxyref{th\_\-decode\_\-packetin()}{p.}{group__decfuncs_g31c814bf09b2232aff69c57ae20f04eb}.\item Retrieve the uncompressed video data via \doxyref{th\_\-decode\_\-ycbcr\_\-out()}{p.}{group__decfuncs_ga9cc8af63fa8540e0fc95572f259cdcb}.\end{itemize}
+\item Call \doxyref{th\_\-decode\_\-free()}{p.}{group__decfuncs_gfb6684ad8ba507b71112bc9de148e7d0} to release all decoder memory. \end{itemize}
+\begin{CompactItemize}
+\item 
+int \bf{th\_\-decode\_\-headerin} (\bf{th\_\-info} $\ast$\_\-info, \bf{th\_\-comment} $\ast$\_\-tc, \bf{th\_\-setup\_\-info} $\ast$$\ast$\_\-setup, ogg\_\-packet $\ast$\_\-op)
+\begin{CompactList}\small\item\em Decodes the header packets of a Theora stream. \item\end{CompactList}\item 
+\bf{th\_\-dec\_\-ctx} $\ast$ \bf{th\_\-decode\_\-alloc} (const \bf{th\_\-info} $\ast$\_\-info, const \bf{th\_\-setup\_\-info} $\ast$\_\-setup)
+\begin{CompactList}\small\item\em Allocates a decoder instance. \item\end{CompactList}\item 
+void \bf{th\_\-setup\_\-free} (\bf{th\_\-setup\_\-info} $\ast$\_\-setup)
+\begin{CompactList}\small\item\em Releases all storage used for the decoder setup information. \item\end{CompactList}\item 
+int \bf{th\_\-decode\_\-ctl} (\bf{th\_\-dec\_\-ctx} $\ast$\_\-dec, int \_\-req, void $\ast$\_\-buf, size\_\-t \_\-buf\_\-sz)
+\begin{CompactList}\small\item\em Decoder control function. \item\end{CompactList}\item 
+int \bf{th\_\-decode\_\-packetin} (\bf{th\_\-dec\_\-ctx} $\ast$\_\-dec, const ogg\_\-packet $\ast$\_\-op, ogg\_\-int64\_\-t $\ast$\_\-granpos)
+\begin{CompactList}\small\item\em Submits a packet containing encoded video data to the decoder. \item\end{CompactList}\item 
+int \bf{th\_\-decode\_\-ycbcr\_\-out} (\bf{th\_\-dec\_\-ctx} $\ast$\_\-dec, \bf{th\_\-ycbcr\_\-buffer} \_\-ycbcr)
+\begin{CompactList}\small\item\em Outputs the next available frame of decoded Y'Cb\-Cr data. \item\end{CompactList}\item 
+void \bf{th\_\-decode\_\-free} (\bf{th\_\-dec\_\-ctx} $\ast$\_\-dec)
+\begin{CompactList}\small\item\em Frees an allocated decoder instance. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \bf{\_\-O\_\-THEORA\_\-THEORADEC\_\-H\_\-}~(1)
+\end{CompactItemize}
+\subsection*{Typedefs}
+\begin{CompactItemize}
+\item 
+typedef void($\ast$) \bf{th\_\-stripe\_\-decoded\_\-func} (void $\ast$\_\-ctx, \bf{th\_\-ycbcr\_\-buffer} \_\-buf, int \_\-yfrag0, int \_\-yfrag\_\-end)
+\begin{CompactList}\small\item\em A callback function for striped decode. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+The {\tt libtheoradec} C decoding API. 
+
+
+
+\subsection{Define Documentation}
+\index{theoradec.h@{theoradec.h}!_O_THEORA_THEORADEC_H_@{\_\-O\_\-THEORA\_\-THEORADEC\_\-H\_\-}}
+\index{_O_THEORA_THEORADEC_H_@{\_\-O\_\-THEORA\_\-THEORADEC\_\-H\_\-}!theoradec.h@{theoradec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-O\_\-THEORA\_\-THEORADEC\_\-H\_\-~(1)}\label{theoradec_8h_0d78767a326c34dbf84d5b845cba7b4a}
+
+
+\index{theoradec.h@{theoradec.h}!TH_DECCTL_GET_PPLEVEL_MAX@{TH\_\-DECCTL\_\-GET\_\-PPLEVEL\_\-MAX}}
+\index{TH_DECCTL_GET_PPLEVEL_MAX@{TH\_\-DECCTL\_\-GET\_\-PPLEVEL\_\-MAX}!theoradec.h@{theoradec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TH\_\-DECCTL\_\-GET\_\-PPLEVEL\_\-MAX~(1)}\label{theoradec_8h_b31f251c9319f2140d247585d30b3d07}
+
+
+Gets the maximum post-processing level. 
+
+The decoder supports a post-processing filter that can improve the appearance of the decoded images. This returns the highest level setting for this post-processor, corresponding to maximum improvement and computational expense.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\rightarrow$} {\em \_\-buf}]int: The maximum post-processing level. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Return values:]
+\begin{description}
+\item[{\em TH\_\-EFAULT}]{\em \_\-dec\_\-ctx\/} or {\em \_\-buf\/} is {\tt NULL}. \item[{\em TH\_\-EINVAL}]{\em \_\-buf\_\-sz\/} is not {\tt sizeof(int)}. \item[{\em TH\_\-EIMPL}]Not supported by this implementation. \end{description}
+\end{Desc}
+\index{theoradec.h@{theoradec.h}!TH_DECCTL_SET_GRANPOS@{TH\_\-DECCTL\_\-SET\_\-GRANPOS}}
+\index{TH_DECCTL_SET_GRANPOS@{TH\_\-DECCTL\_\-SET\_\-GRANPOS}!theoradec.h@{theoradec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TH\_\-DECCTL\_\-SET\_\-GRANPOS~(5)}\label{theoradec_8h_1e870c654d35394f0d490045df04e0f5}
+
+
+Sets the granule position. 
+
+Call this after a seek, before decoding the first frame, to ensure that the proper granule position is returned for all subsequent frames. If you track timestamps yourself and do not use the granule position returned by the decoder, then you need not call this function.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftarrow$} {\em \_\-buf}]{\tt ogg\_\-int64\_\-t}: The granule position of the next frame. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Return values:]
+\begin{description}
+\item[{\em TH\_\-EFAULT}]{\em \_\-dec\_\-ctx\/} or {\em \_\-buf\/} is {\tt NULL}. \item[{\em TH\_\-EINVAL}]{\em \_\-buf\_\-sz\/} is not {\tt sizeof(ogg\_\-int64\_\-t)}, or the granule position is negative. \end{description}
+\end{Desc}
+\index{theoradec.h@{theoradec.h}!TH_DECCTL_SET_PPLEVEL@{TH\_\-DECCTL\_\-SET\_\-PPLEVEL}}
+\index{TH_DECCTL_SET_PPLEVEL@{TH\_\-DECCTL\_\-SET\_\-PPLEVEL}!theoradec.h@{theoradec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TH\_\-DECCTL\_\-SET\_\-PPLEVEL~(3)}\label{theoradec_8h_87774c35e1a755a84e2d705b38ebef0d}
+
+
+Sets the post-processing level. 
+
+By default, post-processing is disabled.
+
+Sets the level of post-processing to use when decoding the compressed stream. This must be a value between zero (off) and the maximum returned by TH\_\-DECCTL\_\-GET\_\-PPLEVEL\_\-MAX.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftarrow$} {\em \_\-buf}]int: The new post-processing level. 0 to disable; larger values use more CPU. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Return values:]
+\begin{description}
+\item[{\em TH\_\-EFAULT}]{\em \_\-dec\_\-ctx\/} or {\em \_\-buf\/} is {\tt NULL}. \item[{\em TH\_\-EINVAL}]{\em \_\-buf\_\-sz\/} is not {\tt sizeof(int)}, or the post-processing level is out of bounds. The maximum post-processing level may be implementation-specific, and can be obtained via \doxyref{TH\_\-DECCTL\_\-GET\_\-PPLEVEL\_\-MAX}{p.}{theoradec_8h_b31f251c9319f2140d247585d30b3d07}. \item[{\em TH\_\-EIMPL}]Not supported by this implementation. \end{description}
+\end{Desc}
+\index{theoradec.h@{theoradec.h}!TH_DECCTL_SET_STRIPE_CB@{TH\_\-DECCTL\_\-SET\_\-STRIPE\_\-CB}}
+\index{TH_DECCTL_SET_STRIPE_CB@{TH\_\-DECCTL\_\-SET\_\-STRIPE\_\-CB}!theoradec.h@{theoradec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TH\_\-DECCTL\_\-SET\_\-STRIPE\_\-CB~(7)}\label{theoradec_8h_c95cc9e109474b0fa4bb920ab2cfdf1e}
+
+
+Sets the striped decode callback function. 
+
+If set, this function will be called as each piece of a frame is fully decoded in \doxyref{th\_\-decode\_\-packetin()}{p.}{group__decfuncs_g31c814bf09b2232aff69c57ae20f04eb}. You can pass in a \doxyref{th\_\-stripe\_\-callback}{p.}{structth__stripe__callback} with \doxyref{th\_\-stripe\_\-callback::stripe\_\-decoded}{p.}{structth__stripe__callback_977c725680a37e3446e459f063b1f4a5} set to {\tt NULL} to disable the callbacks at any point. Enabling striped decode does not prevent you from calling \doxyref{th\_\-decode\_\-ycbcr\_\-out()}{p.}{group__decfuncs_ga9cc8af63fa8540e0fc95572f259cdcb} after the frame is fully decoded.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftarrow$} {\em \_\-buf}]\doxyref{th\_\-stripe\_\-callback}{p.}{structth__stripe__callback}: The callback parameters. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Return values:]
+\begin{description}
+\item[{\em TH\_\-EFAULT}]{\em \_\-dec\_\-ctx\/} or {\em \_\-buf\/} is {\tt NULL}. \item[{\em TH\_\-EINVAL}]{\em \_\-buf\_\-sz\/} is not {\tt sizeof(th\_\-stripe\_\-callback)}. \end{description}
+\end{Desc}
+\index{theoradec.h@{theoradec.h}!TH_DECCTL_SET_TELEMETRY_BITS@{TH\_\-DECCTL\_\-SET\_\-TELEMETRY\_\-BITS}}
+\index{TH_DECCTL_SET_TELEMETRY_BITS@{TH\_\-DECCTL\_\-SET\_\-TELEMETRY\_\-BITS}!theoradec.h@{theoradec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TH\_\-DECCTL\_\-SET\_\-TELEMETRY\_\-BITS~(15)}\label{theoradec_8h_7f43fec07486f8a5f00e92aab7d44a25}
+
+
+Enables telemetry and sets the bitstream breakdown visualization mode. 
+
+\index{theoradec.h@{theoradec.h}!TH_DECCTL_SET_TELEMETRY_MBMODE@{TH\_\-DECCTL\_\-SET\_\-TELEMETRY\_\-MBMODE}}
+\index{TH_DECCTL_SET_TELEMETRY_MBMODE@{TH\_\-DECCTL\_\-SET\_\-TELEMETRY\_\-MBMODE}!theoradec.h@{theoradec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TH\_\-DECCTL\_\-SET\_\-TELEMETRY\_\-MBMODE~(9)}\label{theoradec_8h_8d5e0b9b4c8898f93f241acbeb7e7ffb}
+
+
+Enables telemetry and sets the macroblock display mode. 
+
+\index{theoradec.h@{theoradec.h}!TH_DECCTL_SET_TELEMETRY_MV@{TH\_\-DECCTL\_\-SET\_\-TELEMETRY\_\-MV}}
+\index{TH_DECCTL_SET_TELEMETRY_MV@{TH\_\-DECCTL\_\-SET\_\-TELEMETRY\_\-MV}!theoradec.h@{theoradec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TH\_\-DECCTL\_\-SET\_\-TELEMETRY\_\-MV~(11)}\label{theoradec_8h_829285a03d24832c583f33c6357df8aa}
+
+
+Enables telemetry and sets the motion vector display mode. 
+
+\index{theoradec.h@{theoradec.h}!TH_DECCTL_SET_TELEMETRY_QI@{TH\_\-DECCTL\_\-SET\_\-TELEMETRY\_\-QI}}
+\index{TH_DECCTL_SET_TELEMETRY_QI@{TH\_\-DECCTL\_\-SET\_\-TELEMETRY\_\-QI}!theoradec.h@{theoradec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TH\_\-DECCTL\_\-SET\_\-TELEMETRY\_\-QI~(13)}\label{theoradec_8h_e3e2f7674ad92fe67b63915d48c9df5b}
+
+
+Enables telemetry and sets the adaptive quantization display mode. 
+
+
+
+\subsection{Typedef Documentation}
+\index{theoradec.h@{theoradec.h}!th_dec_ctx@{th\_\-dec\_\-ctx}}
+\index{th_dec_ctx@{th\_\-dec\_\-ctx}!theoradec.h@{theoradec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}typedef struct \bf{th\_\-dec\_\-ctx} \bf{th\_\-dec\_\-ctx}}\label{theoradec_8h_843d70bb02563885a8d54b9c1a781729}
+
+
+The decoder context. 
+
+\index{theoradec.h@{theoradec.h}!th_setup_info@{th\_\-setup\_\-info}}
+\index{th_setup_info@{th\_\-setup\_\-info}!theoradec.h@{theoradec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}typedef struct \bf{th\_\-setup\_\-info} \bf{th\_\-setup\_\-info}}\label{theoradec_8h_b71cd2657455cc27d6c0127c66a89f28}
+
+
+Setup information. 
+
+This contains auxiliary information (Huffman tables and quantization parameters) decoded from the setup header by \doxyref{th\_\-decode\_\-headerin()}{p.}{group__decfuncs_g006d01d36fbe64768c571e6a12b7fc50} to be passed to \doxyref{th\_\-decode\_\-alloc()}{p.}{group__decfuncs_g0ef07a9a97849054aa606c595a2d807e}. It can be re-used to initialize any number of decoders, and can be freed via \doxyref{th\_\-setup\_\-free()}{p.}{group__decfuncs_gdef55431b68aaa59d0d7b32b2f118f27} at any time. \index{theoradec.h@{theoradec.h}!th_stripe_decoded_func@{th\_\-stripe\_\-decoded\_\-func}}
+\index{th_stripe_decoded_func@{th\_\-stripe\_\-decoded\_\-func}!theoradec.h@{theoradec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$) \bf{th\_\-stripe\_\-decoded\_\-func}(void $\ast$\_\-ctx, \bf{th\_\-ycbcr\_\-buffer} \_\-buf, int \_\-yfrag0, int \_\-yfrag\_\-end)}\label{theoradec_8h_6c0f343a494e1584f46b941c1b0fb80b}
+
+
+A callback function for striped decode. 
+
+This is a function pointer to an application-provided function that will be called each time a section of the image is fully decoded in \doxyref{th\_\-decode\_\-packetin()}{p.}{group__decfuncs_g31c814bf09b2232aff69c57ae20f04eb}. This allows the application to process the section immediately, while it is still in cache. Note that the frame is decoded bottom to top, so {\em \_\-yfrag0\/} will steadily decrease with each call until it reaches 0, at which point the full frame is decoded. The number of fragment rows made available in each call depends on the pixel format and the number of post-processing filters enabled, and may not even be constant for the entire frame. If a non-{\tt NULL} {\em \_\-granpos\/} pointer is passed to \doxyref{th\_\-decode\_\-packetin()}{p.}{group__decfuncs_g31c814bf09b2232aff69c57ae20f04eb}, the granule position for the frame will be stored in it before the first callback is made. If an entire frame is dropped (a 0-byte packet), then no callbacks will be made at all for that frame. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em \_\-ctx}]An application-provided context pointer. \item[{\em \_\-buf}]The image buffer for the decoded frame. \item[{\em \_\-yfrag0}]The Y coordinate of the first row of 8x8 fragments decoded. Multiply this by 8 to obtain the pixel row number in the luma plane. If the chroma planes are subsampled in the Y direction, this will always be divisible by two. \item[{\em \_\-yfrag\_\-end}]The Y coordinate of the first row of 8x8 fragments past the newly decoded section. If the chroma planes are subsampled in the Y direction, this will always be divisible by two. I.e., this section contains fragment rows {\tt {\em \_\-yfrag0\/} ...{\em \_\-yfrag\_\-end\/} -1}. \end{description}
+\end{Desc}

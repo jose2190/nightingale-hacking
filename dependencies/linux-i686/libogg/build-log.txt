@@ -1,0 +1,1578 @@
+Enabling Songbird vendor lib: glib
+Enabling Songbird vendor lib: glib
+make -f Makefile.songbird debug
+make -f Makefile.songbird debug
+Enabling Songbird vendor lib: glib
+Enabling Songbird vendor lib: glib
+make[1]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/vendor/libogg'
+make[1]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/vendor/libogg'
+mkdir -p /builds/vendor/sb_linbot01_vendor/build/build
+mkdir -p /builds/vendor/sb_linbot01_vendor/build/build
+ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/private /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/gst-plugins-base /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/mozilla /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/sqlite /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/xulrunner /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/gst-plugins-bad /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/libogg /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/libgpod /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/libtheora /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/taglib /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/gstreamer /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/glib /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/gst-plugins-ugly /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/flac /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/libvorbis /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/libtool /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/gst-plugins-good /builds/vendor/sb_linbot01_vendor/build/linux-i686; 
+ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/private /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/gst-plugins-base /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/mozilla /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/sqlite /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/xulrunner /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/gst-plugins-bad /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/libogg /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/libgpod /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/libtheora /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/taglib /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/gstreamer /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/glib /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/gst-plugins-ugly /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/flac /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/libvorbis /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/libtool /builds/vendor/sb_linbot01_vendor/build/linux-i686;    ln -sv /builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/gst-plugins-good /builds/vendor/sb_linbot01_vendor/build/linux-i686; 
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/private' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/private'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/private' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/private'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/gst-plugins-base' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/gst-plugins-base'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/gst-plugins-base' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/gst-plugins-base'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/mozilla' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/mozilla'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/mozilla' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/mozilla'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/sqlite' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/sqlite'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/sqlite' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/sqlite'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/xulrunner' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/xulrunner'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/xulrunner' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/xulrunner'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/gst-plugins-bad' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/gst-plugins-bad'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/gst-plugins-bad' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/gst-plugins-bad'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/libogg'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/libogg'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/libgpod' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/libgpod'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/libgpod' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/libgpod'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/libtheora' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/libtheora'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/libtheora' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/libtheora'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/taglib' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/taglib'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/taglib' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/taglib'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/gstreamer' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/gstreamer'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/gstreamer' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/gstreamer'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/glib' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/glib'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/glib' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/glib'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/gst-plugins-ugly' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/gst-plugins-ugly'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/gst-plugins-ugly' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/gst-plugins-ugly'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/flac' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/flac'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/flac' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/flac'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/libvorbis' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/libvorbis'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/libvorbis' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/libvorbis'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/libtool' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/libtool'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/libtool' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/libtool'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/gst-plugins-good' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/gst-plugins-good'
+create symbolic link `/builds/vendor/sb_linbot01_vendor/build/linux-i686/gst-plugins-good' to `/builds/vendor/sb_linbot01_vendor/build/checkout/linux-i686/gst-plugins-good'
+(test -h /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg && \
+(test -h /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg && \
+          rm -f -v /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg && \
+          rm -f -v /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg && \
+          mkdir -p /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg) || true
+          mkdir -p /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg) || true
+removed `/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg'
+removed `/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg'
+rm -f -rf /builds/vendor/sb_linbot01_vendor/build/build/libogg/debug
+rm -f -rf /builds/vendor/sb_linbot01_vendor/build/build/libogg/debug
+rm -f -rf /builds/vendor/sb_linbot01_vendor/build/build/libogg/build-deps
+rm -f -rf /builds/vendor/sb_linbot01_vendor/build/build/libogg/build-deps
+rm -f -rf /builds/vendor/sb_linbot01_vendor/build/build/libogg/breakpad/debug
+rm -f -rf /builds/vendor/sb_linbot01_vendor/build/build/libogg/breakpad/debug
+rm -f -rf /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug
+rm -f -rf /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug
+
+
+
+
+====================================
+====================================
+Songbird Vendor Environment Settings
+Songbird Vendor Environment Settings
+====================================
+====================================
+Tools
+Tools
+-----
+-----
+CC = 
+CC = 
+CXX = 
+CXX = 
+LD = 
+LD = 
+OBJDUMP = 
+OBJDUMP = 
+STRIP = strip -v
+STRIP = strip -v
+
+
+Flags
+Flags
+-----
+-----
+CPPFLAGS =
+CPPFLAGS =
+CFLAGS = -g -gstabs+
+CFLAGS = -g -gstabs+
+CXXFLAGS = -g -gstabs+
+CXXFLAGS = -g -gstabs+
+LDFLAGS =
+LDFLAGS =
+ACLOCAL_FLAGS = -I common/m4
+ACLOCAL_FLAGS = -I common/m4
+
+
+Paths
+Paths
+-----
+-----
+PKG_CONFIG_PATH = /builds/vendor/sb_linbot01_vendor/build/linux-i686/glib/debug/lib/pkgconfig
+PKG_CONFIG_PATH = /builds/vendor/sb_linbot01_vendor/build/linux-i686/glib/debug/lib/pkgconfig
+PATH = /builds/vendor/sb_linbot01_vendor/build/linux-i686/glib/debug/bin:/tools/python/bin:/tools/flex/bin:/tools/mercurial/bin:/tools/cmake/bin:/tools/buildbot/bin:/tools/python/bin:/tools/flex/bin:/tools/mercurial/bin:/tools/cmake/bin:/tools/buildbot/bin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/home/birdbld/buildbot:/home/birdbld/bin:/home/birdbld/buildbot:/builds/vendor/sb_linbot01_vendor/build/subversion/
+PATH = /builds/vendor/sb_linbot01_vendor/build/linux-i686/glib/debug/bin:/tools/python/bin:/tools/flex/bin:/tools/mercurial/bin:/tools/cmake/bin:/tools/buildbot/bin:/tools/python/bin:/tools/flex/bin:/tools/mercurial/bin:/tools/cmake/bin:/tools/buildbot/bin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/home/birdbld/buildbot:/home/birdbld/bin:/home/birdbld/buildbot:/builds/vendor/sb_linbot01_vendor/build/subversion/
+
+
+Dependent library settings
+Dependent library settings
+--------------------------
+--------------------------
+LIBOIL_CFLAGS =
+LIBOIL_CFLAGS =
+LIBOIL_LIBS =
+LIBOIL_LIBS =
+OGG_CFLAGS =
+OGG_CFLAGS =
+OGG_LIBS =
+OGG_LIBS =
+FLAC_CFLAGS =
+FLAC_CFLAGS =
+FLAC_LIBS =
+FLAC_LIBS =
+
+
+Platform- and Module- specific settings
+Platform- and Module- specific settings
+---------------------------------------
+---------------------------------------
+
+
+=============================
+=============================
+END Environment Settings DUMP
+END Environment Settings DUMP
+=============================
+=============================
+
+
+
+
+mkdir -p /builds/vendor/sb_linbot01_vendor/build/build/libogg/debug
+mkdir -p /builds/vendor/sb_linbot01_vendor/build/build/libogg/debug
+# TODO: this kinda sucks; fix this; also, now it sucks with the msys
+# TODO: this kinda sucks; fix this; also, now it sucks with the msys
+# stuff in a cross-platform way.
+# stuff in a cross-platform way.
+/builds/vendor/sb_linbot01_vendor/build/vendor/msys-recursive-cp /builds/vendor/sb_linbot01_vendor/build/vendor/libogg /builds/vendor/sb_linbot01_vendor/build/build/libogg/debug --exclude=.svn
+/builds/vendor/sb_linbot01_vendor/build/vendor/msys-recursive-cp /builds/vendor/sb_linbot01_vendor/build/vendor/libogg /builds/vendor/sb_linbot01_vendor/build/build/libogg/debug --exclude=.svn
+Running tar c --exclude=.svn -C /builds/vendor/sb_linbot01_vendor/build/vendor/libogg . | tar x -C /builds/vendor/sb_linbot01_vendor/build/build/libogg/debug
+Running tar c --exclude=.svn -C /builds/vendor/sb_linbot01_vendor/build/vendor/libogg . | tar x -C /builds/vendor/sb_linbot01_vendor/build/build/libogg/debug
+# We do this RUN_CONFIGURE insanity to support cmake
+# We do this RUN_CONFIGURE insanity to support cmake
+cd /builds/vendor/sb_linbot01_vendor/build/build/libogg/debug && \
+cd /builds/vendor/sb_linbot01_vendor/build/build/libogg/debug && \
+          ./configure --prefix=/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug \
+          ./configure --prefix=/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug \
+          --disable-docs  \
+          --disable-docs  \
+           --enable-debug \
+           --enable-debug \
+          -C
+          -C
+configure: creating cache config.cache
+configure: creating cache config.cache
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking whether build environment is sane... yes
+checking for gawk... gawk
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make sets $(MAKE)... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for gcc... gcc
+checking for gcc... gcc
+checking for C compiler default output file name... a.out
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ANSI C... none needed
+checking for gcc option to accept ANSI C... none needed
+checking for style of include used by make... GNU
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking dependency style of gcc... gcc3
+checking build system type... i686-pc-linux-gnu
+checking build system type... i686-pc-linux-gnu
+checking host system type... i686-pc-linux-gnu
+checking host system type... i686-pc-linux-gnu
+checking for a sed that does not truncate output... /bin/sed
+checking for a sed that does not truncate output... /bin/sed
+checking for egrep... grep -E
+checking for egrep... grep -E
+checking for fgrep... grep -F
+checking for fgrep... grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking the maximum length of command line arguments... 98304
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking whether the shell understands "+="... yes
+checking for /usr/bin/ld option to reload object files... -r
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking how to recognize dependent libraries... pass_all
+checking the archiver (ar) interface... ar
+checking the archiver (ar) interface... ar
+checking for strip... strip
+checking for strip... strip
+checking for ranlib... ranlib
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking how to run the C preprocessor... gcc -E
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking whether to build static libraries... yes
+checking whether gcc and cc understand -c and -o together... yes
+checking whether gcc and cc understand -c and -o together... yes
+checking for ANSI C header files... (cached) yes
+checking for ANSI C header files... (cached) yes
+checking for an ANSI C-conforming const... yes
+checking for an ANSI C-conforming const... yes
+checking for int16_t... yes
+checking for int16_t... yes
+checking for int32_t... yes
+checking for int32_t... yes
+checking for uint32_t... no
+checking for uint32_t... no
+checking for uint16_t... no
+checking for uint16_t... no
+checking for u_int32_t... yes
+checking for u_int32_t... yes
+checking for u_int16_t... yes
+checking for u_int16_t... yes
+checking for int64_t... yes
+checking for int64_t... yes
+checking for short... yes
+checking for short... yes
+checking size of short... 2
+checking size of short... 2
+checking for int... yes
+checking for int... yes
+checking size of int... 4
+checking size of int... 4
+checking for long... yes
+checking for long... yes
+checking size of long... 4
+checking size of long... 4
+checking for long long... yes
+checking for long long... yes
+checking size of long long... 8
+checking size of long long... 8
+checking for working memcmp... yes
+checking for working memcmp... yes
+updating cache config.cache
+updating cache config.cache
+configure: creating ./config.status
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating src/Makefile
+config.status: creating doc/Makefile
+config.status: creating doc/Makefile
+config.status: creating doc/libogg/Makefile
+config.status: creating doc/libogg/Makefile
+config.status: creating include/Makefile
+config.status: creating include/Makefile
+config.status: creating include/ogg/Makefile
+config.status: creating include/ogg/Makefile
+config.status: creating include/ogg/config_types.h
+config.status: creating include/ogg/config_types.h
+config.status: creating libogg.spec
+config.status: creating libogg.spec
+config.status: creating ogg.pc
+config.status: creating ogg.pc
+config.status: creating ogg-uninstalled.pc
+config.status: creating ogg-uninstalled.pc
+config.status: creating config.h
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing libtool commands
+# We do this submake-cmd insanity to support cmake
+# We do this submake-cmd insanity to support cmake
+make -C /builds/vendor/sb_linbot01_vendor/build/build/libogg/debug
+make -C /builds/vendor/sb_linbot01_vendor/build/build/libogg/debug
+make[2]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug'
+make[2]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug'
+make  all-recursive
+make  all-recursive
+make[3]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug'
+make[3]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug'
+Making all in src
+Making all in src
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/src'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/src'
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include    -O20 -ffast-math -fsigned-char -g -gstabs+ -MT framing.lo -MD -MP -MF ".deps/framing.Tpo" -c -o framing.lo framing.c; \
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include    -O20 -ffast-math -fsigned-char -g -gstabs+ -MT framing.lo -MD -MP -MF ".deps/framing.Tpo" -c -o framing.lo framing.c; \
+	then mv -f ".deps/framing.Tpo" ".deps/framing.Plo"; else rm -f ".deps/framing.Tpo"; exit 1; fi
+	then mv -f ".deps/framing.Tpo" ".deps/framing.Plo"; else rm -f ".deps/framing.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include -O20 -ffast-math -fsigned-char -g -gstabs+ -MT framing.lo -MD -MP -MF .deps/framing.Tpo -c framing.c  -fPIC -DPIC -o .libs/framing.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include -O20 -ffast-math -fsigned-char -g -gstabs+ -MT framing.lo -MD -MP -MF .deps/framing.Tpo -c framing.c  -fPIC -DPIC -o .libs/framing.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include -O20 -ffast-math -fsigned-char -g -gstabs+ -MT framing.lo -MD -MP -MF .deps/framing.Tpo -c framing.c -o framing.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include -O20 -ffast-math -fsigned-char -g -gstabs+ -MT framing.lo -MD -MP -MF .deps/framing.Tpo -c framing.c -o framing.o >/dev/null 2>&1
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include    -O20 -ffast-math -fsigned-char -g -gstabs+ -MT bitwise.lo -MD -MP -MF ".deps/bitwise.Tpo" -c -o bitwise.lo bitwise.c; \
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include    -O20 -ffast-math -fsigned-char -g -gstabs+ -MT bitwise.lo -MD -MP -MF ".deps/bitwise.Tpo" -c -o bitwise.lo bitwise.c; \
+	then mv -f ".deps/bitwise.Tpo" ".deps/bitwise.Plo"; else rm -f ".deps/bitwise.Tpo"; exit 1; fi
+	then mv -f ".deps/bitwise.Tpo" ".deps/bitwise.Plo"; else rm -f ".deps/bitwise.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include -O20 -ffast-math -fsigned-char -g -gstabs+ -MT bitwise.lo -MD -MP -MF .deps/bitwise.Tpo -c bitwise.c  -fPIC -DPIC -o .libs/bitwise.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include -O20 -ffast-math -fsigned-char -g -gstabs+ -MT bitwise.lo -MD -MP -MF .deps/bitwise.Tpo -c bitwise.c  -fPIC -DPIC -o .libs/bitwise.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include -O20 -ffast-math -fsigned-char -g -gstabs+ -MT bitwise.lo -MD -MP -MF .deps/bitwise.Tpo -c bitwise.c -o bitwise.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include -O20 -ffast-math -fsigned-char -g -gstabs+ -MT bitwise.lo -MD -MP -MF .deps/bitwise.Tpo -c bitwise.c -o bitwise.o >/dev/null 2>&1
+/bin/sh ../libtool --tag=CC --mode=link gcc  -O20 -ffast-math -fsigned-char -g -gstabs+   -o libogg.la -rpath /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib -no-undefined -version-info 6:0:6 framing.lo bitwise.lo  
+/bin/sh ../libtool --tag=CC --mode=link gcc  -O20 -ffast-math -fsigned-char -g -gstabs+   -o libogg.la -rpath /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib -no-undefined -version-info 6:0:6 framing.lo bitwise.lo  
+libtool: link: gcc -shared  .libs/framing.o .libs/bitwise.o      -Wl,-soname -Wl,libogg.so.0 -o .libs/libogg.so.0.6.0
+libtool: link: gcc -shared  .libs/framing.o .libs/bitwise.o      -Wl,-soname -Wl,libogg.so.0 -o .libs/libogg.so.0.6.0
+libtool: link: (cd ".libs" && rm -f "libogg.so.0" && ln -s "libogg.so.0.6.0" "libogg.so.0")
+libtool: link: (cd ".libs" && rm -f "libogg.so.0" && ln -s "libogg.so.0.6.0" "libogg.so.0")
+libtool: link: (cd ".libs" && rm -f "libogg.so" && ln -s "libogg.so.0.6.0" "libogg.so")
+libtool: link: (cd ".libs" && rm -f "libogg.so" && ln -s "libogg.so.0.6.0" "libogg.so")
+libtool: link: ar cru .libs/libogg.a  framing.o bitwise.o
+libtool: link: ar cru .libs/libogg.a  framing.o bitwise.o
+libtool: link: ranlib .libs/libogg.a
+libtool: link: ranlib .libs/libogg.a
+libtool: link: ( cd ".libs" && rm -f "libogg.la" && ln -s "../libogg.la" "libogg.la" )
+libtool: link: ( cd ".libs" && rm -f "libogg.la" && ln -s "../libogg.la" "libogg.la" )
+if gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include   -D_V_SELFTEST -O20 -ffast-math -fsigned-char -g -gstabs+ -MT test_bitwise-bitwise.o -MD -MP -MF ".deps/test_bitwise-bitwise.Tpo" -c -o test_bitwise-bitwise.o `test -f 'bitwise.c' || echo './'`bitwise.c; \
+if gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include   -D_V_SELFTEST -O20 -ffast-math -fsigned-char -g -gstabs+ -MT test_bitwise-bitwise.o -MD -MP -MF ".deps/test_bitwise-bitwise.Tpo" -c -o test_bitwise-bitwise.o `test -f 'bitwise.c' || echo './'`bitwise.c; \
+	then mv -f ".deps/test_bitwise-bitwise.Tpo" ".deps/test_bitwise-bitwise.Po"; else rm -f ".deps/test_bitwise-bitwise.Tpo"; exit 1; fi
+	then mv -f ".deps/test_bitwise-bitwise.Tpo" ".deps/test_bitwise-bitwise.Po"; else rm -f ".deps/test_bitwise-bitwise.Tpo"; exit 1; fi
+/bin/sh ../libtool --tag=CC --mode=link gcc  -O20 -ffast-math -fsigned-char -g -gstabs+   -o test_bitwise  test_bitwise-bitwise.o  
+/bin/sh ../libtool --tag=CC --mode=link gcc  -O20 -ffast-math -fsigned-char -g -gstabs+   -o test_bitwise  test_bitwise-bitwise.o  
+libtool: link: gcc -O20 -ffast-math -fsigned-char -g -gstabs+ -o test_bitwise test_bitwise-bitwise.o 
+libtool: link: gcc -O20 -ffast-math -fsigned-char -g -gstabs+ -o test_bitwise test_bitwise-bitwise.o 
+if gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include   -D_V_SELFTEST -O20 -ffast-math -fsigned-char -g -gstabs+ -MT test_framing-framing.o -MD -MP -MF ".deps/test_framing-framing.Tpo" -c -o test_framing-framing.o `test -f 'framing.c' || echo './'`framing.c; \
+if gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include   -D_V_SELFTEST -O20 -ffast-math -fsigned-char -g -gstabs+ -MT test_framing-framing.o -MD -MP -MF ".deps/test_framing-framing.Tpo" -c -o test_framing-framing.o `test -f 'framing.c' || echo './'`framing.c; \
+	then mv -f ".deps/test_framing-framing.Tpo" ".deps/test_framing-framing.Po"; else rm -f ".deps/test_framing-framing.Tpo"; exit 1; fi
+	then mv -f ".deps/test_framing-framing.Tpo" ".deps/test_framing-framing.Po"; else rm -f ".deps/test_framing-framing.Tpo"; exit 1; fi
+/bin/sh ../libtool --tag=CC --mode=link gcc  -O20 -ffast-math -fsigned-char -g -gstabs+   -o test_framing  test_framing-framing.o  
+/bin/sh ../libtool --tag=CC --mode=link gcc  -O20 -ffast-math -fsigned-char -g -gstabs+   -o test_framing  test_framing-framing.o  
+libtool: link: gcc -O20 -ffast-math -fsigned-char -g -gstabs+ -o test_framing test_framing-framing.o 
+libtool: link: gcc -O20 -ffast-math -fsigned-char -g -gstabs+ -o test_framing test_framing-framing.o 
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/src'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/src'
+Making all in include
+Making all in include
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include'
+Making all in ogg
+Making all in ogg
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include/ogg'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include/ogg'
+make[5]: Nothing to be done for `all'.
+make[5]: Nothing to be done for `all'.
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include/ogg'
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include/ogg'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include'
+make[5]: Nothing to be done for `all-am'.
+make[5]: Nothing to be done for `all-am'.
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include'
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include'
+Making all in doc
+Making all in doc
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc'
+Making all in libogg
+Making all in libogg
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc/libogg'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc/libogg'
+make[5]: Nothing to be done for `all'.
+make[5]: Nothing to be done for `all'.
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc/libogg'
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc/libogg'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc'
+make[5]: Nothing to be done for `all-am'.
+make[5]: Nothing to be done for `all-am'.
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc'
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug'
+make[4]: Nothing to be done for `all-am'.
+make[4]: Nothing to be done for `all-am'.
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug'
+make[3]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug'
+make[3]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug'
+make[2]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug'
+make[2]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug'
+make -C /builds/vendor/sb_linbot01_vendor/build/build/libogg/debug install
+make -C /builds/vendor/sb_linbot01_vendor/build/build/libogg/debug install
+make[2]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug'
+make[2]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug'
+Making install in src
+Making install in src
+make[3]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/src'
+make[3]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/src'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/src'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/src'
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib"
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib"
+ /bin/sh ../libtool --mode=install /usr/bin/install -c  'libogg.la' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib/libogg.la'
+ /bin/sh ../libtool --mode=install /usr/bin/install -c  'libogg.la' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib/libogg.la'
+libtool: install: /usr/bin/install -c .libs/libogg.so.0.6.0 /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib/libogg.so.0.6.0
+libtool: install: /usr/bin/install -c .libs/libogg.so.0.6.0 /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib/libogg.so.0.6.0
+libtool: install: (cd /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib && { ln -s -f libogg.so.0.6.0 libogg.so.0 || { rm -f libogg.so.0 && ln -s libogg.so.0.6.0 libogg.so.0; }; })
+libtool: install: (cd /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib && { ln -s -f libogg.so.0.6.0 libogg.so.0 || { rm -f libogg.so.0 && ln -s libogg.so.0.6.0 libogg.so.0; }; })
+libtool: install: (cd /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib && { ln -s -f libogg.so.0.6.0 libogg.so || { rm -f libogg.so && ln -s libogg.so.0.6.0 libogg.so; }; })
+libtool: install: (cd /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib && { ln -s -f libogg.so.0.6.0 libogg.so || { rm -f libogg.so && ln -s libogg.so.0.6.0 libogg.so; }; })
+libtool: install: /usr/bin/install -c .libs/libogg.lai /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib/libogg.la
+libtool: install: /usr/bin/install -c .libs/libogg.lai /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib/libogg.la
+libtool: install: /usr/bin/install -c .libs/libogg.a /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib/libogg.a
+libtool: install: /usr/bin/install -c .libs/libogg.a /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib/libogg.a
+libtool: install: chmod 644 /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib/libogg.a
+libtool: install: chmod 644 /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib/libogg.a
+libtool: install: ranlib /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib/libogg.a
+libtool: install: ranlib /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib/libogg.a
+libtool: finish: PATH="/builds/vendor/sb_linbot01_vendor/build/linux-i686/glib/debug/bin:/tools/python/bin:/tools/flex/bin:/tools/mercurial/bin:/tools/cmake/bin:/tools/buildbot/bin:/tools/python/bin:/tools/flex/bin:/tools/mercurial/bin:/tools/cmake/bin:/tools/buildbot/bin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/home/birdbld/buildbot:/home/birdbld/bin:/home/birdbld/buildbot:/builds/vendor/sb_linbot01_vendor/build/subversion/:/sbin" ldconfig -n /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib
+libtool: finish: PATH="/builds/vendor/sb_linbot01_vendor/build/linux-i686/glib/debug/bin:/tools/python/bin:/tools/flex/bin:/tools/mercurial/bin:/tools/cmake/bin:/tools/buildbot/bin:/tools/python/bin:/tools/flex/bin:/tools/mercurial/bin:/tools/cmake/bin:/tools/buildbot/bin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/home/birdbld/buildbot:/home/birdbld/bin:/home/birdbld/buildbot:/builds/vendor/sb_linbot01_vendor/build/subversion/:/sbin" ldconfig -n /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Libraries have been installed in:
+Libraries have been installed in:
+   /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib
+   /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib
+
+
+If you ever happen to want to link against installed libraries
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+
+See any operating system documentation about shared libraries for
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/src'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/src'
+make[3]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/src'
+make[3]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/src'
+Making install in include
+Making install in include
+make[3]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include'
+make[3]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include'
+Making install in ogg
+Making install in ogg
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include/ogg'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include/ogg'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include/ogg'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include/ogg'
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-exec-am'.
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/include/ogg" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/include/ogg"
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/include/ogg" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/include/ogg"
+ /usr/bin/install -c -m 644 'config_types.h' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/include/ogg/config_types.h'
+ /usr/bin/install -c -m 644 'config_types.h' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/include/ogg/config_types.h'
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/include/ogg" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/include/ogg"
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/include/ogg" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/include/ogg"
+ /usr/bin/install -c -m 644 'ogg.h' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/include/ogg/ogg.h'
+ /usr/bin/install -c -m 644 'ogg.h' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/include/ogg/ogg.h'
+ /usr/bin/install -c -m 644 'os_types.h' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/include/ogg/os_types.h'
+ /usr/bin/install -c -m 644 'os_types.h' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/include/ogg/os_types.h'
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include/ogg'
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include/ogg'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include/ogg'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include/ogg'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include'
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+make[5]: Nothing to be done for `install-data-am'.
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include'
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include'
+make[3]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include'
+make[3]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/include'
+Making install in doc
+Making install in doc
+make[3]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc'
+make[3]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc'
+Making install in libogg
+Making install in libogg
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc/libogg'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc/libogg'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc/libogg'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc/libogg'
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-exec-am'.
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg"
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg"
+ /usr/bin/install -c -m 644 'bitpacking.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/bitpacking.html'
+ /usr/bin/install -c -m 644 'bitpacking.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/bitpacking.html'
+ /usr/bin/install -c -m 644 'datastructures.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/datastructures.html'
+ /usr/bin/install -c -m 644 'datastructures.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/datastructures.html'
+ /usr/bin/install -c -m 644 'decoding.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/decoding.html'
+ /usr/bin/install -c -m 644 'decoding.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/decoding.html'
+ /usr/bin/install -c -m 644 'encoding.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/encoding.html'
+ /usr/bin/install -c -m 644 'encoding.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/encoding.html'
+ /usr/bin/install -c -m 644 'general.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/general.html'
+ /usr/bin/install -c -m 644 'general.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/general.html'
+ /usr/bin/install -c -m 644 'index.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/index.html'
+ /usr/bin/install -c -m 644 'index.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/index.html'
+ /usr/bin/install -c -m 644 'ogg_packet.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_packet.html'
+ /usr/bin/install -c -m 644 'ogg_packet.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_packet.html'
+ /usr/bin/install -c -m 644 'ogg_packet_clear.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_packet_clear.html'
+ /usr/bin/install -c -m 644 'ogg_packet_clear.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_packet_clear.html'
+ /usr/bin/install -c -m 644 'ogg_page.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_page.html'
+ /usr/bin/install -c -m 644 'ogg_page.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_page.html'
+ /usr/bin/install -c -m 644 'ogg_page_bos.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_page_bos.html'
+ /usr/bin/install -c -m 644 'ogg_page_bos.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_page_bos.html'
+ /usr/bin/install -c -m 644 'ogg_page_checksum_set.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_page_checksum_set.html'
+ /usr/bin/install -c -m 644 'ogg_page_checksum_set.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_page_checksum_set.html'
+ /usr/bin/install -c -m 644 'ogg_page_continued.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_page_continued.html'
+ /usr/bin/install -c -m 644 'ogg_page_continued.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_page_continued.html'
+ /usr/bin/install -c -m 644 'ogg_page_eos.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_page_eos.html'
+ /usr/bin/install -c -m 644 'ogg_page_eos.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_page_eos.html'
+ /usr/bin/install -c -m 644 'ogg_page_granulepos.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_page_granulepos.html'
+ /usr/bin/install -c -m 644 'ogg_page_granulepos.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_page_granulepos.html'
+ /usr/bin/install -c -m 644 'ogg_page_packets.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_page_packets.html'
+ /usr/bin/install -c -m 644 'ogg_page_packets.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_page_packets.html'
+ /usr/bin/install -c -m 644 'ogg_page_pageno.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_page_pageno.html'
+ /usr/bin/install -c -m 644 'ogg_page_pageno.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_page_pageno.html'
+ /usr/bin/install -c -m 644 'ogg_page_serialno.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_page_serialno.html'
+ /usr/bin/install -c -m 644 'ogg_page_serialno.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_page_serialno.html'
+ /usr/bin/install -c -m 644 'ogg_page_version.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_page_version.html'
+ /usr/bin/install -c -m 644 'ogg_page_version.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_page_version.html'
+ /usr/bin/install -c -m 644 'ogg_stream_clear.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_stream_clear.html'
+ /usr/bin/install -c -m 644 'ogg_stream_clear.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_stream_clear.html'
+ /usr/bin/install -c -m 644 'ogg_stream_destroy.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_stream_destroy.html'
+ /usr/bin/install -c -m 644 'ogg_stream_destroy.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_stream_destroy.html'
+ /usr/bin/install -c -m 644 'ogg_stream_eos.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_stream_eos.html'
+ /usr/bin/install -c -m 644 'ogg_stream_eos.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_stream_eos.html'
+ /usr/bin/install -c -m 644 'ogg_stream_flush.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_stream_flush.html'
+ /usr/bin/install -c -m 644 'ogg_stream_flush.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_stream_flush.html'
+ /usr/bin/install -c -m 644 'ogg_stream_init.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_stream_init.html'
+ /usr/bin/install -c -m 644 'ogg_stream_init.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_stream_init.html'
+ /usr/bin/install -c -m 644 'ogg_stream_packetin.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_stream_packetin.html'
+ /usr/bin/install -c -m 644 'ogg_stream_packetin.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_stream_packetin.html'
+ /usr/bin/install -c -m 644 'ogg_stream_packetout.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_stream_packetout.html'
+ /usr/bin/install -c -m 644 'ogg_stream_packetout.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_stream_packetout.html'
+ /usr/bin/install -c -m 644 'ogg_stream_packetpeek.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_stream_packetpeek.html'
+ /usr/bin/install -c -m 644 'ogg_stream_packetpeek.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_stream_packetpeek.html'
+ /usr/bin/install -c -m 644 'ogg_stream_pagein.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_stream_pagein.html'
+ /usr/bin/install -c -m 644 'ogg_stream_pagein.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_stream_pagein.html'
+ /usr/bin/install -c -m 644 'ogg_stream_pageout.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_stream_pageout.html'
+ /usr/bin/install -c -m 644 'ogg_stream_pageout.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_stream_pageout.html'
+ /usr/bin/install -c -m 644 'ogg_stream_reset.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_stream_reset.html'
+ /usr/bin/install -c -m 644 'ogg_stream_reset.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_stream_reset.html'
+ /usr/bin/install -c -m 644 'ogg_stream_reset_serialno.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_stream_reset_serialno.html'
+ /usr/bin/install -c -m 644 'ogg_stream_reset_serialno.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_stream_reset_serialno.html'
+ /usr/bin/install -c -m 644 'ogg_stream_state.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_stream_state.html'
+ /usr/bin/install -c -m 644 'ogg_stream_state.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_stream_state.html'
+ /usr/bin/install -c -m 644 'ogg_sync_buffer.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_sync_buffer.html'
+ /usr/bin/install -c -m 644 'ogg_sync_buffer.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_sync_buffer.html'
+ /usr/bin/install -c -m 644 'ogg_sync_clear.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_sync_clear.html'
+ /usr/bin/install -c -m 644 'ogg_sync_clear.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_sync_clear.html'
+ /usr/bin/install -c -m 644 'ogg_sync_destroy.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_sync_destroy.html'
+ /usr/bin/install -c -m 644 'ogg_sync_destroy.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_sync_destroy.html'
+ /usr/bin/install -c -m 644 'ogg_sync_init.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_sync_init.html'
+ /usr/bin/install -c -m 644 'ogg_sync_init.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_sync_init.html'
+ /usr/bin/install -c -m 644 'ogg_sync_pageout.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_sync_pageout.html'
+ /usr/bin/install -c -m 644 'ogg_sync_pageout.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_sync_pageout.html'
+ /usr/bin/install -c -m 644 'ogg_sync_pageseek.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_sync_pageseek.html'
+ /usr/bin/install -c -m 644 'ogg_sync_pageseek.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_sync_pageseek.html'
+ /usr/bin/install -c -m 644 'ogg_sync_reset.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_sync_reset.html'
+ /usr/bin/install -c -m 644 'ogg_sync_reset.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_sync_reset.html'
+ /usr/bin/install -c -m 644 'ogg_sync_state.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_sync_state.html'
+ /usr/bin/install -c -m 644 'ogg_sync_state.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_sync_state.html'
+ /usr/bin/install -c -m 644 'ogg_sync_wrote.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_sync_wrote.html'
+ /usr/bin/install -c -m 644 'ogg_sync_wrote.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/ogg_sync_wrote.html'
+ /usr/bin/install -c -m 644 'oggpack_adv.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_adv.html'
+ /usr/bin/install -c -m 644 'oggpack_adv.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_adv.html'
+ /usr/bin/install -c -m 644 'oggpack_adv1.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_adv1.html'
+ /usr/bin/install -c -m 644 'oggpack_adv1.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_adv1.html'
+ /usr/bin/install -c -m 644 'oggpack_bits.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_bits.html'
+ /usr/bin/install -c -m 644 'oggpack_bits.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_bits.html'
+ /usr/bin/install -c -m 644 'oggpack_buffer.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_buffer.html'
+ /usr/bin/install -c -m 644 'oggpack_buffer.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_buffer.html'
+ /usr/bin/install -c -m 644 'oggpack_bytes.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_bytes.html'
+ /usr/bin/install -c -m 644 'oggpack_bytes.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_bytes.html'
+ /usr/bin/install -c -m 644 'oggpack_get_buffer.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_get_buffer.html'
+ /usr/bin/install -c -m 644 'oggpack_get_buffer.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_get_buffer.html'
+ /usr/bin/install -c -m 644 'oggpack_look.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_look.html'
+ /usr/bin/install -c -m 644 'oggpack_look.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_look.html'
+ /usr/bin/install -c -m 644 'oggpack_look1.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_look1.html'
+ /usr/bin/install -c -m 644 'oggpack_look1.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_look1.html'
+ /usr/bin/install -c -m 644 'oggpack_read.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_read.html'
+ /usr/bin/install -c -m 644 'oggpack_read.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_read.html'
+ /usr/bin/install -c -m 644 'oggpack_read1.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_read1.html'
+ /usr/bin/install -c -m 644 'oggpack_read1.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_read1.html'
+ /usr/bin/install -c -m 644 'oggpack_readinit.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_readinit.html'
+ /usr/bin/install -c -m 644 'oggpack_readinit.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_readinit.html'
+ /usr/bin/install -c -m 644 'oggpack_reset.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_reset.html'
+ /usr/bin/install -c -m 644 'oggpack_reset.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_reset.html'
+ /usr/bin/install -c -m 644 'oggpack_write.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_write.html'
+ /usr/bin/install -c -m 644 'oggpack_write.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_write.html'
+ /usr/bin/install -c -m 644 'oggpack_writealign.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_writealign.html'
+ /usr/bin/install -c -m 644 'oggpack_writealign.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_writealign.html'
+ /usr/bin/install -c -m 644 'oggpack_writeclear.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_writeclear.html'
+ /usr/bin/install -c -m 644 'oggpack_writeclear.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_writeclear.html'
+ /usr/bin/install -c -m 644 'oggpack_writecopy.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_writecopy.html'
+ /usr/bin/install -c -m 644 'oggpack_writecopy.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_writecopy.html'
+ /usr/bin/install -c -m 644 'oggpack_writeinit.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_writeinit.html'
+ /usr/bin/install -c -m 644 'oggpack_writeinit.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_writeinit.html'
+ /usr/bin/install -c -m 644 'oggpack_writetrunc.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_writetrunc.html'
+ /usr/bin/install -c -m 644 'oggpack_writetrunc.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/oggpack_writetrunc.html'
+ /usr/bin/install -c -m 644 'overview.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/overview.html'
+ /usr/bin/install -c -m 644 'overview.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/overview.html'
+ /usr/bin/install -c -m 644 'reference.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/reference.html'
+ /usr/bin/install -c -m 644 'reference.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/reference.html'
+ /usr/bin/install -c -m 644 'style.css' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/style.css'
+ /usr/bin/install -c -m 644 'style.css' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg/style.css'
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc/libogg'
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc/libogg'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc/libogg'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc/libogg'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc'
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-exec-am'.
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4"
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4"
+ /usr/bin/install -c -m 644 'framing.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/framing.html'
+ /usr/bin/install -c -m 644 'framing.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/framing.html'
+ /usr/bin/install -c -m 644 'index.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/index.html'
+ /usr/bin/install -c -m 644 'index.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/index.html'
+ /usr/bin/install -c -m 644 'oggstream.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/oggstream.html'
+ /usr/bin/install -c -m 644 'oggstream.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/oggstream.html'
+ /usr/bin/install -c -m 644 'ogg-multiplex.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg-multiplex.html'
+ /usr/bin/install -c -m 644 'ogg-multiplex.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/ogg-multiplex.html'
+ /usr/bin/install -c -m 644 'stream.png' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/stream.png'
+ /usr/bin/install -c -m 644 'stream.png' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/stream.png'
+ /usr/bin/install -c -m 644 'vorbisword2.png' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/vorbisword2.png'
+ /usr/bin/install -c -m 644 'vorbisword2.png' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/vorbisword2.png'
+ /usr/bin/install -c -m 644 'white-ogg.png' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/white-ogg.png'
+ /usr/bin/install -c -m 644 'white-ogg.png' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/white-ogg.png'
+ /usr/bin/install -c -m 644 'white-xifish.png' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/white-xifish.png'
+ /usr/bin/install -c -m 644 'white-xifish.png' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/white-xifish.png'
+ /usr/bin/install -c -m 644 'rfc3533.txt' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/rfc3533.txt'
+ /usr/bin/install -c -m 644 'rfc3533.txt' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/rfc3533.txt'
+ /usr/bin/install -c -m 644 'rfc5334.txt' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/rfc5334.txt'
+ /usr/bin/install -c -m 644 'rfc5334.txt' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/rfc5334.txt'
+ /usr/bin/install -c -m 644 'skeleton.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/skeleton.html'
+ /usr/bin/install -c -m 644 'skeleton.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/doc/libogg-1.1.4/skeleton.html'
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc'
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc'
+make[3]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc'
+make[3]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug/doc'
+make[3]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug'
+make[3]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-exec-am'.
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/aclocal" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/aclocal"
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/aclocal" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/aclocal"
+ /usr/bin/install -c -m 644 'ogg.m4' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/aclocal/ogg.m4'
+ /usr/bin/install -c -m 644 'ogg.m4' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/share/aclocal/ogg.m4'
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib/pkgconfig" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib/pkgconfig"
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib/pkgconfig" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib/pkgconfig"
+ /usr/bin/install -c -m 644 'ogg.pc' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib/pkgconfig/ogg.pc'
+ /usr/bin/install -c -m 644 'ogg.pc' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib/pkgconfig/ogg.pc'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug'
+make[3]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug'
+make[3]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug'
+make[2]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug'
+make[2]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/debug'
+Slaying libtool .la files on real platforms...
+Slaying libtool .la files on real platforms...
+find /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug -type f -name '*.la' -exec rm -f -fv {} \;
+find /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug -type f -name '*.la' -exec rm -f -fv {} \;
+removed `/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib/libogg.la'
+removed `/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/debug/lib/libogg.la'
+cp build-log.txt /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg
+cp build-log.txt /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg
+make[1]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/vendor/libogg'
+make[1]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/vendor/libogg'
+make -f Makefile.songbird release
+make -f Makefile.songbird release
+Enabling Songbird vendor lib: glib
+Enabling Songbird vendor lib: glib
+make[1]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/vendor/libogg'
+make[1]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/vendor/libogg'
+mkdir -p /builds/vendor/sb_linbot01_vendor/build/build
+mkdir -p /builds/vendor/sb_linbot01_vendor/build/build
+(test -h /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg && \
+(test -h /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg && \
+          rm -f -v /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg && \
+          rm -f -v /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg && \
+          mkdir -p /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg) || true
+          mkdir -p /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg) || true
+rm -f -rf /builds/vendor/sb_linbot01_vendor/build/build/libogg/release
+rm -f -rf /builds/vendor/sb_linbot01_vendor/build/build/libogg/release
+rm -f -rf /builds/vendor/sb_linbot01_vendor/build/build/libogg/build-deps
+rm -f -rf /builds/vendor/sb_linbot01_vendor/build/build/libogg/build-deps
+rm -f -rf /builds/vendor/sb_linbot01_vendor/build/build/libogg/breakpad/release
+rm -f -rf /builds/vendor/sb_linbot01_vendor/build/build/libogg/breakpad/release
+rm -f -rf /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release
+rm -f -rf /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release
+
+
+
+
+====================================
+====================================
+Songbird Vendor Environment Settings
+Songbird Vendor Environment Settings
+====================================
+====================================
+Tools
+Tools
+-----
+-----
+CC = 
+CC = 
+CXX = 
+CXX = 
+LD = 
+LD = 
+OBJDUMP = 
+OBJDUMP = 
+STRIP = strip -v
+STRIP = strip -v
+
+
+Flags
+Flags
+-----
+-----
+CPPFLAGS =
+CPPFLAGS =
+CFLAGS = -g -gstabs+
+CFLAGS = -g -gstabs+
+CXXFLAGS = -g -gstabs+
+CXXFLAGS = -g -gstabs+
+LDFLAGS =
+LDFLAGS =
+ACLOCAL_FLAGS = -I common/m4
+ACLOCAL_FLAGS = -I common/m4
+
+
+Paths
+Paths
+-----
+-----
+PKG_CONFIG_PATH = /builds/vendor/sb_linbot01_vendor/build/linux-i686/glib/release/lib/pkgconfig
+PKG_CONFIG_PATH = /builds/vendor/sb_linbot01_vendor/build/linux-i686/glib/release/lib/pkgconfig
+PATH = /builds/vendor/sb_linbot01_vendor/build/linux-i686/glib/release/bin:/tools/python/bin:/tools/flex/bin:/tools/mercurial/bin:/tools/cmake/bin:/tools/buildbot/bin:/tools/python/bin:/tools/flex/bin:/tools/mercurial/bin:/tools/cmake/bin:/tools/buildbot/bin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/home/birdbld/buildbot:/home/birdbld/bin:/home/birdbld/buildbot:/builds/vendor/sb_linbot01_vendor/build/subversion/
+PATH = /builds/vendor/sb_linbot01_vendor/build/linux-i686/glib/release/bin:/tools/python/bin:/tools/flex/bin:/tools/mercurial/bin:/tools/cmake/bin:/tools/buildbot/bin:/tools/python/bin:/tools/flex/bin:/tools/mercurial/bin:/tools/cmake/bin:/tools/buildbot/bin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/home/birdbld/buildbot:/home/birdbld/bin:/home/birdbld/buildbot:/builds/vendor/sb_linbot01_vendor/build/subversion/
+
+
+Dependent library settings
+Dependent library settings
+--------------------------
+--------------------------
+LIBOIL_CFLAGS =
+LIBOIL_CFLAGS =
+LIBOIL_LIBS =
+LIBOIL_LIBS =
+OGG_CFLAGS =
+OGG_CFLAGS =
+OGG_LIBS =
+OGG_LIBS =
+FLAC_CFLAGS =
+FLAC_CFLAGS =
+FLAC_LIBS =
+FLAC_LIBS =
+
+
+Platform- and Module- specific settings
+Platform- and Module- specific settings
+---------------------------------------
+---------------------------------------
+
+
+=============================
+=============================
+END Environment Settings DUMP
+END Environment Settings DUMP
+=============================
+=============================
+
+
+
+
+mkdir -p /builds/vendor/sb_linbot01_vendor/build/build/libogg/release
+mkdir -p /builds/vendor/sb_linbot01_vendor/build/build/libogg/release
+# TODO: this kinda sucks; fix this; also, now it sucks with the msys
+# TODO: this kinda sucks; fix this; also, now it sucks with the msys
+# stuff in a cross-platform way.
+# stuff in a cross-platform way.
+/builds/vendor/sb_linbot01_vendor/build/vendor/msys-recursive-cp /builds/vendor/sb_linbot01_vendor/build/vendor/libogg /builds/vendor/sb_linbot01_vendor/build/build/libogg/release --exclude=.svn
+/builds/vendor/sb_linbot01_vendor/build/vendor/msys-recursive-cp /builds/vendor/sb_linbot01_vendor/build/vendor/libogg /builds/vendor/sb_linbot01_vendor/build/build/libogg/release --exclude=.svn
+Running tar c --exclude=.svn -C /builds/vendor/sb_linbot01_vendor/build/vendor/libogg . | tar x -C /builds/vendor/sb_linbot01_vendor/build/build/libogg/release
+Running tar c --exclude=.svn -C /builds/vendor/sb_linbot01_vendor/build/vendor/libogg . | tar x -C /builds/vendor/sb_linbot01_vendor/build/build/libogg/release
+# We do this RUN_CONFIGURE insanity to support cmake
+# We do this RUN_CONFIGURE insanity to support cmake
+cd /builds/vendor/sb_linbot01_vendor/build/build/libogg/release && \
+cd /builds/vendor/sb_linbot01_vendor/build/build/libogg/release && \
+          ./configure --prefix=/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release \
+          ./configure --prefix=/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release \
+          --disable-docs  \
+          --disable-docs  \
+           --disable-debug \
+           --disable-debug \
+          -C
+          -C
+configure: creating cache config.cache
+configure: creating cache config.cache
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking whether build environment is sane... yes
+checking for gawk... gawk
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make sets $(MAKE)... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for gcc... gcc
+checking for gcc... gcc
+checking for C compiler default output file name... a.out
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ANSI C... none needed
+checking for gcc option to accept ANSI C... none needed
+checking for style of include used by make... GNU
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking dependency style of gcc... gcc3
+checking build system type... i686-pc-linux-gnu
+checking build system type... i686-pc-linux-gnu
+checking host system type... i686-pc-linux-gnu
+checking host system type... i686-pc-linux-gnu
+checking for a sed that does not truncate output... /bin/sed
+checking for a sed that does not truncate output... /bin/sed
+checking for egrep... grep -E
+checking for egrep... grep -E
+checking for fgrep... grep -F
+checking for fgrep... grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking the maximum length of command line arguments... 98304
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking whether the shell understands "+="... yes
+checking for /usr/bin/ld option to reload object files... -r
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking how to recognize dependent libraries... pass_all
+checking the archiver (ar) interface... ar
+checking the archiver (ar) interface... ar
+checking for strip... strip
+checking for strip... strip
+checking for ranlib... ranlib
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking how to run the C preprocessor... gcc -E
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking whether to build static libraries... yes
+checking whether gcc and cc understand -c and -o together... yes
+checking whether gcc and cc understand -c and -o together... yes
+checking for ANSI C header files... (cached) yes
+checking for ANSI C header files... (cached) yes
+checking for an ANSI C-conforming const... yes
+checking for an ANSI C-conforming const... yes
+checking for int16_t... yes
+checking for int16_t... yes
+checking for int32_t... yes
+checking for int32_t... yes
+checking for uint32_t... no
+checking for uint32_t... no
+checking for uint16_t... no
+checking for uint16_t... no
+checking for u_int32_t... yes
+checking for u_int32_t... yes
+checking for u_int16_t... yes
+checking for u_int16_t... yes
+checking for int64_t... yes
+checking for int64_t... yes
+checking for short... yes
+checking for short... yes
+checking size of short... 2
+checking size of short... 2
+checking for int... yes
+checking for int... yes
+checking size of int... 4
+checking size of int... 4
+checking for long... yes
+checking for long... yes
+checking size of long... 4
+checking size of long... 4
+checking for long long... yes
+checking for long long... yes
+checking size of long long... 8
+checking size of long long... 8
+checking for working memcmp... yes
+checking for working memcmp... yes
+updating cache config.cache
+updating cache config.cache
+configure: creating ./config.status
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating src/Makefile
+config.status: creating doc/Makefile
+config.status: creating doc/Makefile
+config.status: creating doc/libogg/Makefile
+config.status: creating doc/libogg/Makefile
+config.status: creating include/Makefile
+config.status: creating include/Makefile
+config.status: creating include/ogg/Makefile
+config.status: creating include/ogg/Makefile
+config.status: creating include/ogg/config_types.h
+config.status: creating include/ogg/config_types.h
+config.status: creating libogg.spec
+config.status: creating libogg.spec
+config.status: creating ogg.pc
+config.status: creating ogg.pc
+config.status: creating ogg-uninstalled.pc
+config.status: creating ogg-uninstalled.pc
+config.status: creating config.h
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing libtool commands
+# We do this submake-cmd insanity to support cmake
+# We do this submake-cmd insanity to support cmake
+make -C /builds/vendor/sb_linbot01_vendor/build/build/libogg/release
+make -C /builds/vendor/sb_linbot01_vendor/build/build/libogg/release
+make[2]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release'
+make[2]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release'
+make  all-recursive
+make  all-recursive
+make[3]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release'
+make[3]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release'
+Making all in src
+Making all in src
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/src'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/src'
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include    -O20 -ffast-math -fsigned-char -g -gstabs+ -MT framing.lo -MD -MP -MF ".deps/framing.Tpo" -c -o framing.lo framing.c; \
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include    -O20 -ffast-math -fsigned-char -g -gstabs+ -MT framing.lo -MD -MP -MF ".deps/framing.Tpo" -c -o framing.lo framing.c; \
+	then mv -f ".deps/framing.Tpo" ".deps/framing.Plo"; else rm -f ".deps/framing.Tpo"; exit 1; fi
+	then mv -f ".deps/framing.Tpo" ".deps/framing.Plo"; else rm -f ".deps/framing.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include -O20 -ffast-math -fsigned-char -g -gstabs+ -MT framing.lo -MD -MP -MF .deps/framing.Tpo -c framing.c  -fPIC -DPIC -o .libs/framing.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include -O20 -ffast-math -fsigned-char -g -gstabs+ -MT framing.lo -MD -MP -MF .deps/framing.Tpo -c framing.c  -fPIC -DPIC -o .libs/framing.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include -O20 -ffast-math -fsigned-char -g -gstabs+ -MT framing.lo -MD -MP -MF .deps/framing.Tpo -c framing.c -o framing.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include -O20 -ffast-math -fsigned-char -g -gstabs+ -MT framing.lo -MD -MP -MF .deps/framing.Tpo -c framing.c -o framing.o >/dev/null 2>&1
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include    -O20 -ffast-math -fsigned-char -g -gstabs+ -MT bitwise.lo -MD -MP -MF ".deps/bitwise.Tpo" -c -o bitwise.lo bitwise.c; \
+if /bin/sh ../libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include    -O20 -ffast-math -fsigned-char -g -gstabs+ -MT bitwise.lo -MD -MP -MF ".deps/bitwise.Tpo" -c -o bitwise.lo bitwise.c; \
+	then mv -f ".deps/bitwise.Tpo" ".deps/bitwise.Plo"; else rm -f ".deps/bitwise.Tpo"; exit 1; fi
+	then mv -f ".deps/bitwise.Tpo" ".deps/bitwise.Plo"; else rm -f ".deps/bitwise.Tpo"; exit 1; fi
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include -O20 -ffast-math -fsigned-char -g -gstabs+ -MT bitwise.lo -MD -MP -MF .deps/bitwise.Tpo -c bitwise.c  -fPIC -DPIC -o .libs/bitwise.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include -O20 -ffast-math -fsigned-char -g -gstabs+ -MT bitwise.lo -MD -MP -MF .deps/bitwise.Tpo -c bitwise.c  -fPIC -DPIC -o .libs/bitwise.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include -O20 -ffast-math -fsigned-char -g -gstabs+ -MT bitwise.lo -MD -MP -MF .deps/bitwise.Tpo -c bitwise.c -o bitwise.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include -O20 -ffast-math -fsigned-char -g -gstabs+ -MT bitwise.lo -MD -MP -MF .deps/bitwise.Tpo -c bitwise.c -o bitwise.o >/dev/null 2>&1
+/bin/sh ../libtool --tag=CC --mode=link gcc  -O20 -ffast-math -fsigned-char -g -gstabs+   -o libogg.la -rpath /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib -no-undefined -version-info 6:0:6 framing.lo bitwise.lo  
+/bin/sh ../libtool --tag=CC --mode=link gcc  -O20 -ffast-math -fsigned-char -g -gstabs+   -o libogg.la -rpath /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib -no-undefined -version-info 6:0:6 framing.lo bitwise.lo  
+libtool: link: gcc -shared  .libs/framing.o .libs/bitwise.o      -Wl,-soname -Wl,libogg.so.0 -o .libs/libogg.so.0.6.0
+libtool: link: gcc -shared  .libs/framing.o .libs/bitwise.o      -Wl,-soname -Wl,libogg.so.0 -o .libs/libogg.so.0.6.0
+libtool: link: (cd ".libs" && rm -f "libogg.so.0" && ln -s "libogg.so.0.6.0" "libogg.so.0")
+libtool: link: (cd ".libs" && rm -f "libogg.so.0" && ln -s "libogg.so.0.6.0" "libogg.so.0")
+libtool: link: (cd ".libs" && rm -f "libogg.so" && ln -s "libogg.so.0.6.0" "libogg.so")
+libtool: link: (cd ".libs" && rm -f "libogg.so" && ln -s "libogg.so.0.6.0" "libogg.so")
+libtool: link: ar cru .libs/libogg.a  framing.o bitwise.o
+libtool: link: ar cru .libs/libogg.a  framing.o bitwise.o
+libtool: link: ranlib .libs/libogg.a
+libtool: link: ranlib .libs/libogg.a
+libtool: link: ( cd ".libs" && rm -f "libogg.la" && ln -s "../libogg.la" "libogg.la" )
+libtool: link: ( cd ".libs" && rm -f "libogg.la" && ln -s "../libogg.la" "libogg.la" )
+if gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include   -D_V_SELFTEST -O20 -ffast-math -fsigned-char -g -gstabs+ -MT test_bitwise-bitwise.o -MD -MP -MF ".deps/test_bitwise-bitwise.Tpo" -c -o test_bitwise-bitwise.o `test -f 'bitwise.c' || echo './'`bitwise.c; \
+if gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include   -D_V_SELFTEST -O20 -ffast-math -fsigned-char -g -gstabs+ -MT test_bitwise-bitwise.o -MD -MP -MF ".deps/test_bitwise-bitwise.Tpo" -c -o test_bitwise-bitwise.o `test -f 'bitwise.c' || echo './'`bitwise.c; \
+	then mv -f ".deps/test_bitwise-bitwise.Tpo" ".deps/test_bitwise-bitwise.Po"; else rm -f ".deps/test_bitwise-bitwise.Tpo"; exit 1; fi
+	then mv -f ".deps/test_bitwise-bitwise.Tpo" ".deps/test_bitwise-bitwise.Po"; else rm -f ".deps/test_bitwise-bitwise.Tpo"; exit 1; fi
+/bin/sh ../libtool --tag=CC --mode=link gcc  -O20 -ffast-math -fsigned-char -g -gstabs+   -o test_bitwise  test_bitwise-bitwise.o  
+/bin/sh ../libtool --tag=CC --mode=link gcc  -O20 -ffast-math -fsigned-char -g -gstabs+   -o test_bitwise  test_bitwise-bitwise.o  
+libtool: link: gcc -O20 -ffast-math -fsigned-char -g -gstabs+ -o test_bitwise test_bitwise-bitwise.o 
+libtool: link: gcc -O20 -ffast-math -fsigned-char -g -gstabs+ -o test_bitwise test_bitwise-bitwise.o 
+if gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include   -D_V_SELFTEST -O20 -ffast-math -fsigned-char -g -gstabs+ -MT test_framing-framing.o -MD -MP -MF ".deps/test_framing-framing.Tpo" -c -o test_framing-framing.o `test -f 'framing.c' || echo './'`framing.c; \
+if gcc -DHAVE_CONFIG_H -I. -I. -I.. -I../include -I../include   -D_V_SELFTEST -O20 -ffast-math -fsigned-char -g -gstabs+ -MT test_framing-framing.o -MD -MP -MF ".deps/test_framing-framing.Tpo" -c -o test_framing-framing.o `test -f 'framing.c' || echo './'`framing.c; \
+	then mv -f ".deps/test_framing-framing.Tpo" ".deps/test_framing-framing.Po"; else rm -f ".deps/test_framing-framing.Tpo"; exit 1; fi
+	then mv -f ".deps/test_framing-framing.Tpo" ".deps/test_framing-framing.Po"; else rm -f ".deps/test_framing-framing.Tpo"; exit 1; fi
+/bin/sh ../libtool --tag=CC --mode=link gcc  -O20 -ffast-math -fsigned-char -g -gstabs+   -o test_framing  test_framing-framing.o  
+/bin/sh ../libtool --tag=CC --mode=link gcc  -O20 -ffast-math -fsigned-char -g -gstabs+   -o test_framing  test_framing-framing.o  
+libtool: link: gcc -O20 -ffast-math -fsigned-char -g -gstabs+ -o test_framing test_framing-framing.o 
+libtool: link: gcc -O20 -ffast-math -fsigned-char -g -gstabs+ -o test_framing test_framing-framing.o 
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/src'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/src'
+Making all in include
+Making all in include
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include'
+Making all in ogg
+Making all in ogg
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include/ogg'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include/ogg'
+make[5]: Nothing to be done for `all'.
+make[5]: Nothing to be done for `all'.
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include/ogg'
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include/ogg'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include'
+make[5]: Nothing to be done for `all-am'.
+make[5]: Nothing to be done for `all-am'.
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include'
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include'
+Making all in doc
+Making all in doc
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc'
+Making all in libogg
+Making all in libogg
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc/libogg'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc/libogg'
+make[5]: Nothing to be done for `all'.
+make[5]: Nothing to be done for `all'.
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc/libogg'
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc/libogg'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc'
+make[5]: Nothing to be done for `all-am'.
+make[5]: Nothing to be done for `all-am'.
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc'
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release'
+make[4]: Nothing to be done for `all-am'.
+make[4]: Nothing to be done for `all-am'.
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release'
+make[3]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release'
+make[3]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release'
+make[2]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release'
+make[2]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release'
+make -C /builds/vendor/sb_linbot01_vendor/build/build/libogg/release install
+make -C /builds/vendor/sb_linbot01_vendor/build/build/libogg/release install
+make[2]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release'
+make[2]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release'
+Making install in src
+Making install in src
+make[3]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/src'
+make[3]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/src'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/src'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/src'
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib"
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib"
+ /bin/sh ../libtool --mode=install /usr/bin/install -c  'libogg.la' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib/libogg.la'
+ /bin/sh ../libtool --mode=install /usr/bin/install -c  'libogg.la' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib/libogg.la'
+libtool: install: /usr/bin/install -c .libs/libogg.so.0.6.0 /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib/libogg.so.0.6.0
+libtool: install: /usr/bin/install -c .libs/libogg.so.0.6.0 /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib/libogg.so.0.6.0
+libtool: install: (cd /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib && { ln -s -f libogg.so.0.6.0 libogg.so.0 || { rm -f libogg.so.0 && ln -s libogg.so.0.6.0 libogg.so.0; }; })
+libtool: install: (cd /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib && { ln -s -f libogg.so.0.6.0 libogg.so.0 || { rm -f libogg.so.0 && ln -s libogg.so.0.6.0 libogg.so.0; }; })
+libtool: install: (cd /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib && { ln -s -f libogg.so.0.6.0 libogg.so || { rm -f libogg.so && ln -s libogg.so.0.6.0 libogg.so; }; })
+libtool: install: (cd /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib && { ln -s -f libogg.so.0.6.0 libogg.so || { rm -f libogg.so && ln -s libogg.so.0.6.0 libogg.so; }; })
+libtool: install: /usr/bin/install -c .libs/libogg.lai /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib/libogg.la
+libtool: install: /usr/bin/install -c .libs/libogg.lai /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib/libogg.la
+libtool: install: /usr/bin/install -c .libs/libogg.a /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib/libogg.a
+libtool: install: /usr/bin/install -c .libs/libogg.a /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib/libogg.a
+libtool: install: chmod 644 /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib/libogg.a
+libtool: install: chmod 644 /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib/libogg.a
+libtool: install: ranlib /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib/libogg.a
+libtool: install: ranlib /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib/libogg.a
+libtool: finish: PATH="/builds/vendor/sb_linbot01_vendor/build/linux-i686/glib/release/bin:/tools/python/bin:/tools/flex/bin:/tools/mercurial/bin:/tools/cmake/bin:/tools/buildbot/bin:/tools/python/bin:/tools/flex/bin:/tools/mercurial/bin:/tools/cmake/bin:/tools/buildbot/bin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/home/birdbld/buildbot:/home/birdbld/bin:/home/birdbld/buildbot:/builds/vendor/sb_linbot01_vendor/build/subversion/:/sbin" ldconfig -n /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib
+libtool: finish: PATH="/builds/vendor/sb_linbot01_vendor/build/linux-i686/glib/release/bin:/tools/python/bin:/tools/flex/bin:/tools/mercurial/bin:/tools/cmake/bin:/tools/buildbot/bin:/tools/python/bin:/tools/flex/bin:/tools/mercurial/bin:/tools/cmake/bin:/tools/buildbot/bin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/home/birdbld/buildbot:/home/birdbld/bin:/home/birdbld/buildbot:/builds/vendor/sb_linbot01_vendor/build/subversion/:/sbin" ldconfig -n /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Libraries have been installed in:
+Libraries have been installed in:
+   /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib
+   /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib
+
+
+If you ever happen to want to link against installed libraries
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+
+See any operating system documentation about shared libraries for
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/src'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/src'
+make[3]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/src'
+make[3]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/src'
+Making install in include
+Making install in include
+make[3]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include'
+make[3]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include'
+Making install in ogg
+Making install in ogg
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include/ogg'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include/ogg'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include/ogg'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include/ogg'
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-exec-am'.
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/include/ogg" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/include/ogg"
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/include/ogg" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/include/ogg"
+ /usr/bin/install -c -m 644 'config_types.h' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/include/ogg/config_types.h'
+ /usr/bin/install -c -m 644 'config_types.h' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/include/ogg/config_types.h'
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/include/ogg" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/include/ogg"
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/include/ogg" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/include/ogg"
+ /usr/bin/install -c -m 644 'ogg.h' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/include/ogg/ogg.h'
+ /usr/bin/install -c -m 644 'ogg.h' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/include/ogg/ogg.h'
+ /usr/bin/install -c -m 644 'os_types.h' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/include/ogg/os_types.h'
+ /usr/bin/install -c -m 644 'os_types.h' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/include/ogg/os_types.h'
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include/ogg'
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include/ogg'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include/ogg'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include/ogg'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include'
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+make[5]: Nothing to be done for `install-data-am'.
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include'
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include'
+make[3]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include'
+make[3]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/include'
+Making install in doc
+Making install in doc
+make[3]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc'
+make[3]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc'
+Making install in libogg
+Making install in libogg
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc/libogg'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc/libogg'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc/libogg'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc/libogg'
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-exec-am'.
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg"
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg"
+ /usr/bin/install -c -m 644 'bitpacking.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/bitpacking.html'
+ /usr/bin/install -c -m 644 'bitpacking.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/bitpacking.html'
+ /usr/bin/install -c -m 644 'datastructures.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/datastructures.html'
+ /usr/bin/install -c -m 644 'datastructures.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/datastructures.html'
+ /usr/bin/install -c -m 644 'decoding.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/decoding.html'
+ /usr/bin/install -c -m 644 'decoding.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/decoding.html'
+ /usr/bin/install -c -m 644 'encoding.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/encoding.html'
+ /usr/bin/install -c -m 644 'encoding.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/encoding.html'
+ /usr/bin/install -c -m 644 'general.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/general.html'
+ /usr/bin/install -c -m 644 'general.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/general.html'
+ /usr/bin/install -c -m 644 'index.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/index.html'
+ /usr/bin/install -c -m 644 'index.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/index.html'
+ /usr/bin/install -c -m 644 'ogg_packet.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_packet.html'
+ /usr/bin/install -c -m 644 'ogg_packet.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_packet.html'
+ /usr/bin/install -c -m 644 'ogg_packet_clear.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_packet_clear.html'
+ /usr/bin/install -c -m 644 'ogg_packet_clear.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_packet_clear.html'
+ /usr/bin/install -c -m 644 'ogg_page.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_page.html'
+ /usr/bin/install -c -m 644 'ogg_page.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_page.html'
+ /usr/bin/install -c -m 644 'ogg_page_bos.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_page_bos.html'
+ /usr/bin/install -c -m 644 'ogg_page_bos.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_page_bos.html'
+ /usr/bin/install -c -m 644 'ogg_page_checksum_set.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_page_checksum_set.html'
+ /usr/bin/install -c -m 644 'ogg_page_checksum_set.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_page_checksum_set.html'
+ /usr/bin/install -c -m 644 'ogg_page_continued.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_page_continued.html'
+ /usr/bin/install -c -m 644 'ogg_page_continued.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_page_continued.html'
+ /usr/bin/install -c -m 644 'ogg_page_eos.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_page_eos.html'
+ /usr/bin/install -c -m 644 'ogg_page_eos.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_page_eos.html'
+ /usr/bin/install -c -m 644 'ogg_page_granulepos.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_page_granulepos.html'
+ /usr/bin/install -c -m 644 'ogg_page_granulepos.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_page_granulepos.html'
+ /usr/bin/install -c -m 644 'ogg_page_packets.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_page_packets.html'
+ /usr/bin/install -c -m 644 'ogg_page_packets.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_page_packets.html'
+ /usr/bin/install -c -m 644 'ogg_page_pageno.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_page_pageno.html'
+ /usr/bin/install -c -m 644 'ogg_page_pageno.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_page_pageno.html'
+ /usr/bin/install -c -m 644 'ogg_page_serialno.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_page_serialno.html'
+ /usr/bin/install -c -m 644 'ogg_page_serialno.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_page_serialno.html'
+ /usr/bin/install -c -m 644 'ogg_page_version.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_page_version.html'
+ /usr/bin/install -c -m 644 'ogg_page_version.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_page_version.html'
+ /usr/bin/install -c -m 644 'ogg_stream_clear.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_stream_clear.html'
+ /usr/bin/install -c -m 644 'ogg_stream_clear.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_stream_clear.html'
+ /usr/bin/install -c -m 644 'ogg_stream_destroy.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_stream_destroy.html'
+ /usr/bin/install -c -m 644 'ogg_stream_destroy.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_stream_destroy.html'
+ /usr/bin/install -c -m 644 'ogg_stream_eos.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_stream_eos.html'
+ /usr/bin/install -c -m 644 'ogg_stream_eos.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_stream_eos.html'
+ /usr/bin/install -c -m 644 'ogg_stream_flush.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_stream_flush.html'
+ /usr/bin/install -c -m 644 'ogg_stream_flush.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_stream_flush.html'
+ /usr/bin/install -c -m 644 'ogg_stream_init.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_stream_init.html'
+ /usr/bin/install -c -m 644 'ogg_stream_init.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_stream_init.html'
+ /usr/bin/install -c -m 644 'ogg_stream_packetin.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_stream_packetin.html'
+ /usr/bin/install -c -m 644 'ogg_stream_packetin.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_stream_packetin.html'
+ /usr/bin/install -c -m 644 'ogg_stream_packetout.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_stream_packetout.html'
+ /usr/bin/install -c -m 644 'ogg_stream_packetout.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_stream_packetout.html'
+ /usr/bin/install -c -m 644 'ogg_stream_packetpeek.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_stream_packetpeek.html'
+ /usr/bin/install -c -m 644 'ogg_stream_packetpeek.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_stream_packetpeek.html'
+ /usr/bin/install -c -m 644 'ogg_stream_pagein.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_stream_pagein.html'
+ /usr/bin/install -c -m 644 'ogg_stream_pagein.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_stream_pagein.html'
+ /usr/bin/install -c -m 644 'ogg_stream_pageout.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_stream_pageout.html'
+ /usr/bin/install -c -m 644 'ogg_stream_pageout.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_stream_pageout.html'
+ /usr/bin/install -c -m 644 'ogg_stream_reset.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_stream_reset.html'
+ /usr/bin/install -c -m 644 'ogg_stream_reset.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_stream_reset.html'
+ /usr/bin/install -c -m 644 'ogg_stream_reset_serialno.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_stream_reset_serialno.html'
+ /usr/bin/install -c -m 644 'ogg_stream_reset_serialno.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_stream_reset_serialno.html'
+ /usr/bin/install -c -m 644 'ogg_stream_state.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_stream_state.html'
+ /usr/bin/install -c -m 644 'ogg_stream_state.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_stream_state.html'
+ /usr/bin/install -c -m 644 'ogg_sync_buffer.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_sync_buffer.html'
+ /usr/bin/install -c -m 644 'ogg_sync_buffer.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_sync_buffer.html'
+ /usr/bin/install -c -m 644 'ogg_sync_clear.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_sync_clear.html'
+ /usr/bin/install -c -m 644 'ogg_sync_clear.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_sync_clear.html'
+ /usr/bin/install -c -m 644 'ogg_sync_destroy.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_sync_destroy.html'
+ /usr/bin/install -c -m 644 'ogg_sync_destroy.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_sync_destroy.html'
+ /usr/bin/install -c -m 644 'ogg_sync_init.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_sync_init.html'
+ /usr/bin/install -c -m 644 'ogg_sync_init.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_sync_init.html'
+ /usr/bin/install -c -m 644 'ogg_sync_pageout.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_sync_pageout.html'
+ /usr/bin/install -c -m 644 'ogg_sync_pageout.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_sync_pageout.html'
+ /usr/bin/install -c -m 644 'ogg_sync_pageseek.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_sync_pageseek.html'
+ /usr/bin/install -c -m 644 'ogg_sync_pageseek.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_sync_pageseek.html'
+ /usr/bin/install -c -m 644 'ogg_sync_reset.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_sync_reset.html'
+ /usr/bin/install -c -m 644 'ogg_sync_reset.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_sync_reset.html'
+ /usr/bin/install -c -m 644 'ogg_sync_state.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_sync_state.html'
+ /usr/bin/install -c -m 644 'ogg_sync_state.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_sync_state.html'
+ /usr/bin/install -c -m 644 'ogg_sync_wrote.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_sync_wrote.html'
+ /usr/bin/install -c -m 644 'ogg_sync_wrote.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/ogg_sync_wrote.html'
+ /usr/bin/install -c -m 644 'oggpack_adv.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_adv.html'
+ /usr/bin/install -c -m 644 'oggpack_adv.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_adv.html'
+ /usr/bin/install -c -m 644 'oggpack_adv1.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_adv1.html'
+ /usr/bin/install -c -m 644 'oggpack_adv1.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_adv1.html'
+ /usr/bin/install -c -m 644 'oggpack_bits.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_bits.html'
+ /usr/bin/install -c -m 644 'oggpack_bits.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_bits.html'
+ /usr/bin/install -c -m 644 'oggpack_buffer.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_buffer.html'
+ /usr/bin/install -c -m 644 'oggpack_buffer.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_buffer.html'
+ /usr/bin/install -c -m 644 'oggpack_bytes.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_bytes.html'
+ /usr/bin/install -c -m 644 'oggpack_bytes.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_bytes.html'
+ /usr/bin/install -c -m 644 'oggpack_get_buffer.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_get_buffer.html'
+ /usr/bin/install -c -m 644 'oggpack_get_buffer.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_get_buffer.html'
+ /usr/bin/install -c -m 644 'oggpack_look.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_look.html'
+ /usr/bin/install -c -m 644 'oggpack_look.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_look.html'
+ /usr/bin/install -c -m 644 'oggpack_look1.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_look1.html'
+ /usr/bin/install -c -m 644 'oggpack_look1.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_look1.html'
+ /usr/bin/install -c -m 644 'oggpack_read.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_read.html'
+ /usr/bin/install -c -m 644 'oggpack_read.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_read.html'
+ /usr/bin/install -c -m 644 'oggpack_read1.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_read1.html'
+ /usr/bin/install -c -m 644 'oggpack_read1.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_read1.html'
+ /usr/bin/install -c -m 644 'oggpack_readinit.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_readinit.html'
+ /usr/bin/install -c -m 644 'oggpack_readinit.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_readinit.html'
+ /usr/bin/install -c -m 644 'oggpack_reset.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_reset.html'
+ /usr/bin/install -c -m 644 'oggpack_reset.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_reset.html'
+ /usr/bin/install -c -m 644 'oggpack_write.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_write.html'
+ /usr/bin/install -c -m 644 'oggpack_write.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_write.html'
+ /usr/bin/install -c -m 644 'oggpack_writealign.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_writealign.html'
+ /usr/bin/install -c -m 644 'oggpack_writealign.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_writealign.html'
+ /usr/bin/install -c -m 644 'oggpack_writeclear.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_writeclear.html'
+ /usr/bin/install -c -m 644 'oggpack_writeclear.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_writeclear.html'
+ /usr/bin/install -c -m 644 'oggpack_writecopy.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_writecopy.html'
+ /usr/bin/install -c -m 644 'oggpack_writecopy.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_writecopy.html'
+ /usr/bin/install -c -m 644 'oggpack_writeinit.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_writeinit.html'
+ /usr/bin/install -c -m 644 'oggpack_writeinit.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_writeinit.html'
+ /usr/bin/install -c -m 644 'oggpack_writetrunc.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_writetrunc.html'
+ /usr/bin/install -c -m 644 'oggpack_writetrunc.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/oggpack_writetrunc.html'
+ /usr/bin/install -c -m 644 'overview.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/overview.html'
+ /usr/bin/install -c -m 644 'overview.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/overview.html'
+ /usr/bin/install -c -m 644 'reference.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/reference.html'
+ /usr/bin/install -c -m 644 'reference.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/reference.html'
+ /usr/bin/install -c -m 644 'style.css' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/style.css'
+ /usr/bin/install -c -m 644 'style.css' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg/style.css'
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc/libogg'
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc/libogg'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc/libogg'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc/libogg'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc'
+make[5]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc'
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-exec-am'.
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4"
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4"
+ /usr/bin/install -c -m 644 'framing.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/framing.html'
+ /usr/bin/install -c -m 644 'framing.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/framing.html'
+ /usr/bin/install -c -m 644 'index.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/index.html'
+ /usr/bin/install -c -m 644 'index.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/index.html'
+ /usr/bin/install -c -m 644 'oggstream.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/oggstream.html'
+ /usr/bin/install -c -m 644 'oggstream.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/oggstream.html'
+ /usr/bin/install -c -m 644 'ogg-multiplex.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg-multiplex.html'
+ /usr/bin/install -c -m 644 'ogg-multiplex.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/ogg-multiplex.html'
+ /usr/bin/install -c -m 644 'stream.png' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/stream.png'
+ /usr/bin/install -c -m 644 'stream.png' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/stream.png'
+ /usr/bin/install -c -m 644 'vorbisword2.png' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/vorbisword2.png'
+ /usr/bin/install -c -m 644 'vorbisword2.png' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/vorbisword2.png'
+ /usr/bin/install -c -m 644 'white-ogg.png' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/white-ogg.png'
+ /usr/bin/install -c -m 644 'white-ogg.png' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/white-ogg.png'
+ /usr/bin/install -c -m 644 'white-xifish.png' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/white-xifish.png'
+ /usr/bin/install -c -m 644 'white-xifish.png' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/white-xifish.png'
+ /usr/bin/install -c -m 644 'rfc3533.txt' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/rfc3533.txt'
+ /usr/bin/install -c -m 644 'rfc3533.txt' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/rfc3533.txt'
+ /usr/bin/install -c -m 644 'rfc5334.txt' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/rfc5334.txt'
+ /usr/bin/install -c -m 644 'rfc5334.txt' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/rfc5334.txt'
+ /usr/bin/install -c -m 644 'skeleton.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/skeleton.html'
+ /usr/bin/install -c -m 644 'skeleton.html' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/doc/libogg-1.1.4/skeleton.html'
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc'
+make[5]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc'
+make[3]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc'
+make[3]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release/doc'
+make[3]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release'
+make[3]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release'
+make[4]: Entering directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-exec-am'.
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/aclocal" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/aclocal"
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/aclocal" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/aclocal"
+ /usr/bin/install -c -m 644 'ogg.m4' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/aclocal/ogg.m4'
+ /usr/bin/install -c -m 644 'ogg.m4' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/share/aclocal/ogg.m4'
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib/pkgconfig" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib/pkgconfig"
+test -z "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib/pkgconfig" || mkdir -p -- "/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib/pkgconfig"
+ /usr/bin/install -c -m 644 'ogg.pc' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib/pkgconfig/ogg.pc'
+ /usr/bin/install -c -m 644 'ogg.pc' '/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib/pkgconfig/ogg.pc'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release'
+make[4]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release'
+make[3]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release'
+make[3]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release'
+make[2]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release'
+make[2]: Leaving directory `/builds/vendor/sb_linbot01_vendor/build/build/libogg/release'
+Slaying libtool .la files on real platforms...
+Slaying libtool .la files on real platforms...
+find /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release -type f -name '*.la' -exec rm -f -fv {} \;
+find /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release -type f -name '*.la' -exec rm -f -fv {} \;
+removed `/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib/libogg.la'
+removed `/builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release/lib/libogg.la'
+mkdir -p /builds/vendor/sb_linbot01_vendor/build/build/libogg/breakpad/release/breakpad-symbols
+mkdir -p /builds/vendor/sb_linbot01_vendor/build/build/libogg/breakpad/release/breakpad-symbols
+python /builds/vendor/sb_linbot01_vendor/build/linux-i686/mozilla/release/scripts/symbolstore.py \
+python /builds/vendor/sb_linbot01_vendor/build/linux-i686/mozilla/release/scripts/symbolstore.py \
+	   --vcs-info \
+	   --vcs-info \
+	   -s /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release \
+	   -s /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release \
+	   /builds/vendor/sb_linbot01_vendor/build/linux-i686/mozilla/release/bin/dump_syms \
+	   /builds/vendor/sb_linbot01_vendor/build/linux-i686/mozilla/release/bin/dump_syms \
+	   /builds/vendor/sb_linbot01_vendor/build/build/libogg/breakpad/release/breakpad-symbols \
+	   /builds/vendor/sb_linbot01_vendor/build/build/libogg/breakpad/release/breakpad-symbols \
+	   /builds/vendor/sb_linbot01_vendor/build/build/libogg/breakpad/release \
+	   /builds/vendor/sb_linbot01_vendor/build/build/libogg/breakpad/release \
+	   /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release \
+	   /builds/vendor/sb_linbot01_vendor/build/linux-i686/libogg/release \
+	   > /builds/vendor/sb_linbot01_vendor/build/build/libogg/breakpad/release/breakpad-symbols/libogg-1.1.4-linux-i686-release-symbol-list.txt
+	   > /builds/vendor/sb_linbot01_vendor/build/build/libogg/breakpad/release/breakpad-symbols/libogg-1.1.4-linux-i686-release-symbol-list.txt
+find /builds/vendor/sb_linbot01_vendor/build/build/libogg/breakpad/release/breakpad-symbols -type d -exec chmod 0755 {} \; 
+find /builds/vendor/sb_linbot01_vendor/build/build/libogg/breakpad/release/breakpad-symbols -type d -exec chmod 0755 {} \; 
+find /builds/vendor/sb_linbot01_vendor/build/build/libogg/breakpad/release/breakpad-symbols -type f -exec chmod 0644 {} \; 
+find /builds/vendor/sb_linbot01_vendor/build/build/libogg/breakpad/release/breakpad-symbols -type f -exec chmod 0644 {} \; 
+cd /builds/vendor/sb_linbot01_vendor/build/build/libogg/breakpad/release/breakpad-symbols && \
+cd /builds/vendor/sb_linbot01_vendor/build/build/libogg/breakpad/release/breakpad-symbols && \
+	   zip -r9D /builds/vendor/sb_linbot01_vendor/build/build/libogg/breakpad/release/sb-vendor-libogg-1.1.4-linux-i686-release-symbols.zip .
+	   zip -r9D /builds/vendor/sb_linbot01_vendor/build/build/libogg/breakpad/release/sb-vendor-libogg-1.1.4-linux-i686-release-symbols.zip .
+  adding: libogg.so.0.6.0/EC462BDCB8759A23D46087D065CB0C2E0/libogg.so.0.6.0.sym (deflated 62%)
+  adding: libogg.so.0.6.0/EC462BDCB8759A23D46087D065CB0C2E0/libogg.so.0.6.0.sym (deflated 62%)
+  adding: libogg.so.0/EC462BDCB8759A23D46087D065CB0C2E0/libogg.so.0.sym (deflated 62%)
+  adding: libogg.so.0/EC462BDCB8759A23D46087D065CB0C2E0/libogg.so.0.sym (

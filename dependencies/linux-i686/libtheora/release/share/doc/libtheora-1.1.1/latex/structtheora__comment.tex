@@ -1,0 +1,65 @@
+\section{theora\_\-comment Struct Reference}
+\label{structtheora__comment}\index{theora_comment@{theora\_\-comment}}
+Comment header metadata.  
+
+
+{\tt \#include $<$theora.h$>$}
+
+\subsection*{Data Fields}
+\begin{CompactItemize}
+\item 
+char $\ast$$\ast$ \bf{user\_\-comments}
+\begin{CompactList}\small\item\em An array of comment string vectors. \item\end{CompactList}\item 
+int $\ast$ \bf{comment\_\-lengths}
+\begin{CompactList}\small\item\em An array of corresponding string vector lengths in bytes. \item\end{CompactList}\item 
+int \bf{comments}
+\begin{CompactList}\small\item\em The total number of comment string vectors. \item\end{CompactList}\item 
+char $\ast$ \bf{vendor}
+\begin{CompactList}\small\item\em The vendor string identifying the encoder, null terminated. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Comment header metadata. 
+
+This structure holds the in-stream metadata corresponding to the 'comment' header packet.
+
+Meta data is stored as a series of (tag, value) pairs, in length-encoded string vectors. The first occurence of the '=' character delimits the tag and value. A particular tag may occur more than once. The character set encoding for the strings is always UTF-8, but the tag names are limited to case-insensitive ASCII. See the spec for details.
+
+In filling in this structure, \doxyref{theora\_\-decode\_\-header()}{p.}{group__oldfuncs_g02915e63c1bd733ee291f577a8b75a82} will null-terminate the user\_\-comment strings for safety. However, the bitstream format itself treats them as 8-bit clean, and so the length array should be treated as authoritative for their length. 
+
+
+
+\subsection{Field Documentation}
+\index{theora_comment@{theora\_\-comment}!comment_lengths@{comment\_\-lengths}}
+\index{comment_lengths@{comment\_\-lengths}!theora_comment@{theora\_\-comment}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ \bf{theora\_\-comment::comment\_\-lengths}}\label{structtheora__comment_5ab4a376d3c217282a684577c9c9f49a}
+
+
+An array of corresponding string vector lengths in bytes. 
+
+\index{theora_comment@{theora\_\-comment}!comments@{comments}}
+\index{comments@{comments}!theora_comment@{theora\_\-comment}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int \bf{theora\_\-comment::comments}}\label{structtheora__comment_122393035c8352ff9be42d69e73aee00}
+
+
+The total number of comment string vectors. 
+
+\index{theora_comment@{theora\_\-comment}!user_comments@{user\_\-comments}}
+\index{user_comments@{user\_\-comments}!theora_comment@{theora\_\-comment}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}char$\ast$$\ast$ \bf{theora\_\-comment::user\_\-comments}}\label{structtheora__comment_1e236fd180dfce19be89081399444cf5}
+
+
+An array of comment string vectors. 
+
+\index{theora_comment@{theora\_\-comment}!vendor@{vendor}}
+\index{vendor@{vendor}!theora_comment@{theora\_\-comment}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ \bf{theora\_\-comment::vendor}}\label{structtheora__comment_db371baf8f0daed42af8b875cf8430ef}
+
+
+The vendor string identifying the encoder, null terminated. 
+
+
+
+The documentation for this struct was generated from the following file:\begin{CompactItemize}
+\item 
+\bf{theora.h}\end{CompactItemize}

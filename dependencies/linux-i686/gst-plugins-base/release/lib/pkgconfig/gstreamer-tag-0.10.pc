@@ -1,0 +1,12 @@
+prefix=/builds/vendor/sb_linbot01_vendor_trunk/build/linux-i686/gst-plugins-base/release
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/gstreamer-0.10
+
+Name: GStreamer Tag Library
+Description: Tag base classes and helper functions
+Requires: gstreamer-0.10
+Version: 0.10.25
+Libs: -L${libdir} -lgsttag-0.10
+Cflags: -I${includedir}
+

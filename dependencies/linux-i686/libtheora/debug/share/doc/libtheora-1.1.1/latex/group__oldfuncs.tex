@@ -1,0 +1,793 @@
+\section{Legacy pre-1.0 C API}
+\label{group__oldfuncs}\index{Legacy pre-1.0 C API@{Legacy pre-1.0 C API}}
+\subsection*{Files}
+\begin{CompactItemize}
+\item 
+file \bf{theora.h}
+\begin{CompactList}\small\item\em The libtheora pre-1.0 legacy C API. \item\end{CompactList}
+
+\end{CompactItemize}
+\subsection*{Data Structures}
+\begin{CompactItemize}
+\item 
+struct \bf{yuv\_\-buffer}
+\begin{CompactList}\small\item\em A YUV buffer for passing uncompressed frames to and from the codec. \item\end{CompactList}\item 
+struct \bf{theora\_\-info}
+\begin{CompactList}\small\item\em Theora bitstream info. \item\end{CompactList}\item 
+struct \bf{theora\_\-state}
+\begin{CompactList}\small\item\em Codec internal state and context. \item\end{CompactList}\item 
+struct \bf{theora\_\-comment}
+\begin{CompactList}\small\item\em Comment header metadata. \item\end{CompactList}\end{CompactItemize}
+\subsection*{theora\_\-control() codes}
+\begin{CompactItemize}
+\item 
+\#define \bf{TH\_\-DECCTL\_\-GET\_\-PPLEVEL\_\-MAX}~(1)
+\begin{CompactList}\small\item\em Get the maximum post-processing level. \item\end{CompactList}\item 
+\#define \bf{TH\_\-DECCTL\_\-SET\_\-PPLEVEL}~(3)
+\begin{CompactList}\small\item\em Set the post-processing level. \item\end{CompactList}\item 
+\#define \bf{TH\_\-ENCCTL\_\-SET\_\-KEYFRAME\_\-FREQUENCY\_\-FORCE}~(4)
+\begin{CompactList}\small\item\em Sets the maximum distance between key frames. \item\end{CompactList}\item 
+\#define \bf{TH\_\-DECCTL\_\-SET\_\-GRANPOS}~(5)
+\begin{CompactList}\small\item\em Set the granule position. \item\end{CompactList}\item 
+\#define \bf{TH\_\-ENCCTL\_\-SET\_\-QUANT\_\-PARAMS}~(2)
+\begin{CompactList}\small\item\em Sets the quantization parameters to use. \item\end{CompactList}\item 
+\#define \bf{TH\_\-ENCCTL\_\-SET\_\-VP3\_\-COMPATIBLE}~(10)
+\begin{CompactList}\small\item\em Disables any encoder features that would prevent lossless transcoding back to VP3. \item\end{CompactList}\item 
+\#define \bf{TH\_\-ENCCTL\_\-GET\_\-SPLEVEL\_\-MAX}~(12)
+\begin{CompactList}\small\item\em Gets the maximum speed level. \item\end{CompactList}\item 
+\#define \bf{TH\_\-ENCCTL\_\-SET\_\-SPLEVEL}~(14)
+\begin{CompactList}\small\item\em Sets the speed level. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \bf{OC\_\-FAULT}~-1
+\begin{CompactList}\small\item\em General failure. \item\end{CompactList}\item 
+\#define \bf{OC\_\-EINVAL}~-10
+\begin{CompactList}\small\item\em Library encountered invalid internal data. \item\end{CompactList}\item 
+\#define \bf{OC\_\-DISABLED}~-11
+\begin{CompactList}\small\item\em Requested action is disabled. \item\end{CompactList}\item 
+\#define \bf{OC\_\-BADHEADER}~-20
+\begin{CompactList}\small\item\em Header packet was corrupt/invalid. \item\end{CompactList}\item 
+\#define \bf{OC\_\-NOTFORMAT}~-21
+\begin{CompactList}\small\item\em Packet is not a theora packet. \item\end{CompactList}\item 
+\#define \bf{OC\_\-VERSION}~-22
+\begin{CompactList}\small\item\em Bitstream version is not handled. \item\end{CompactList}\item 
+\#define \bf{OC\_\-IMPL}~-23
+\begin{CompactList}\small\item\em Feature or action not implemented. \item\end{CompactList}\item 
+\#define \bf{OC\_\-BADPACKET}~-24
+\begin{CompactList}\small\item\em Packet is corrupt. \item\end{CompactList}\item 
+\#define \bf{OC\_\-NEWPACKET}~-25
+\begin{CompactList}\small\item\em Packet is an (ignorable) unhandled extension. \item\end{CompactList}\item 
+\#define \bf{OC\_\-DUPFRAME}~1
+\begin{CompactList}\small\item\em Packet is a dropped frame. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Enumerations}
+\begin{CompactItemize}
+\item 
+enum \bf{theora\_\-colorspace} \{ \bf{OC\_\-CS\_\-UNSPECIFIED}, 
+\bf{OC\_\-CS\_\-ITU\_\-REC\_\-470M}, 
+\bf{OC\_\-CS\_\-ITU\_\-REC\_\-470BG}, 
+\bf{OC\_\-CS\_\-NSPACES}
+ \}
+\begin{CompactList}\small\item\em A Colorspace. \item\end{CompactList}\item 
+enum \bf{theora\_\-pixelformat} \{ \bf{OC\_\-PF\_\-420}, 
+\bf{OC\_\-PF\_\-RSVD}, 
+\bf{OC\_\-PF\_\-422}, 
+\bf{OC\_\-PF\_\-444}
+ \}
+\begin{CompactList}\small\item\em A Chroma subsampling. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+const char $\ast$ \bf{theora\_\-version\_\-string} (void)
+\begin{CompactList}\small\item\em Retrieve a human-readable string to identify the encoder vendor and version. \item\end{CompactList}\item 
+ogg\_\-uint32\_\-t \bf{theora\_\-version\_\-number} (void)
+\begin{CompactList}\small\item\em Retrieve a 32-bit version number. \item\end{CompactList}\item 
+int \bf{theora\_\-encode\_\-init} (\bf{theora\_\-state} $\ast$th, \bf{theora\_\-info} $\ast$ti)
+\begin{CompactList}\small\item\em Initialize the theora encoder. \item\end{CompactList}\item 
+int \bf{theora\_\-encode\_\-YUVin} (\bf{theora\_\-state} $\ast$t, \bf{yuv\_\-buffer} $\ast$yuv)
+\begin{CompactList}\small\item\em Submit a YUV buffer to the theora encoder. \item\end{CompactList}\item 
+int \bf{theora\_\-encode\_\-packetout} (\bf{theora\_\-state} $\ast$t, int last\_\-p, ogg\_\-packet $\ast$op)
+\begin{CompactList}\small\item\em Request the next packet of encoded video. \item\end{CompactList}\item 
+int \bf{theora\_\-encode\_\-header} (\bf{theora\_\-state} $\ast$t, ogg\_\-packet $\ast$op)
+\begin{CompactList}\small\item\em Request a packet containing the initial header. \item\end{CompactList}\item 
+int \bf{theora\_\-encode\_\-comment} (\bf{theora\_\-comment} $\ast$tc, ogg\_\-packet $\ast$op)
+\begin{CompactList}\small\item\em Request a comment header packet from provided metadata. \item\end{CompactList}\item 
+int \bf{theora\_\-encode\_\-tables} (\bf{theora\_\-state} $\ast$t, ogg\_\-packet $\ast$op)
+\begin{CompactList}\small\item\em Request a packet containing the codebook tables for the stream. \item\end{CompactList}\item 
+int \bf{theora\_\-decode\_\-header} (\bf{theora\_\-info} $\ast$ci, \bf{theora\_\-comment} $\ast$cc, ogg\_\-packet $\ast$op)
+\begin{CompactList}\small\item\em Decode an Ogg packet, with the expectation that the packet contains an initial header, comment data or codebook tables. \item\end{CompactList}\item 
+int \bf{theora\_\-decode\_\-init} (\bf{theora\_\-state} $\ast$th, \bf{theora\_\-info} $\ast$c)
+\begin{CompactList}\small\item\em Initialize a \doxyref{theora\_\-state}{p.}{structtheora__state} handle for decoding. \item\end{CompactList}\item 
+int \bf{theora\_\-decode\_\-packetin} (\bf{theora\_\-state} $\ast$th, ogg\_\-packet $\ast$op)
+\begin{CompactList}\small\item\em Input a packet containing encoded data into the theora decoder. \item\end{CompactList}\item 
+int \bf{theora\_\-decode\_\-YUVout} (\bf{theora\_\-state} $\ast$th, \bf{yuv\_\-buffer} $\ast$yuv)
+\begin{CompactList}\small\item\em Output the next available frame of decoded YUV data. \item\end{CompactList}\item 
+int \bf{theora\_\-packet\_\-isheader} (ogg\_\-packet $\ast$op)
+\begin{CompactList}\small\item\em Report whether a theora packet is a header or not This function does no verification beyond checking the header flag bit so it should not be used for bitstream identification; use \doxyref{theora\_\-decode\_\-header()}{p.}{group__oldfuncs_g02915e63c1bd733ee291f577a8b75a82} for that. \item\end{CompactList}\item 
+int \bf{theora\_\-packet\_\-iskeyframe} (ogg\_\-packet $\ast$op)
+\begin{CompactList}\small\item\em Report whether a theora packet is a keyframe or not. \item\end{CompactList}\item 
+int \bf{theora\_\-granule\_\-shift} (\bf{theora\_\-info} $\ast$ti)
+\begin{CompactList}\small\item\em Report the granulepos shift radix. \item\end{CompactList}\item 
+ogg\_\-int64\_\-t \bf{theora\_\-granule\_\-frame} (\bf{theora\_\-state} $\ast$th, ogg\_\-int64\_\-t granulepos)
+\begin{CompactList}\small\item\em Convert a granulepos to an absolute frame index, starting at 0. \item\end{CompactList}\item 
+double \bf{theora\_\-granule\_\-time} (\bf{theora\_\-state} $\ast$th, ogg\_\-int64\_\-t granulepos)
+\begin{CompactList}\small\item\em Convert a granulepos to absolute time in seconds. \item\end{CompactList}\item 
+void \bf{theora\_\-info\_\-init} (\bf{theora\_\-info} $\ast$c)
+\begin{CompactList}\small\item\em Initialize a \doxyref{theora\_\-info}{p.}{structtheora__info} structure. \item\end{CompactList}\item 
+void \bf{theora\_\-info\_\-clear} (\bf{theora\_\-info} $\ast$c)
+\begin{CompactList}\small\item\em Clear a \doxyref{theora\_\-info}{p.}{structtheora__info} structure. \item\end{CompactList}\item 
+void \bf{theora\_\-clear} (\bf{theora\_\-state} $\ast$t)
+\begin{CompactList}\small\item\em Free all internal data associated with a \doxyref{theora\_\-state}{p.}{structtheora__state} handle. \item\end{CompactList}\item 
+void \bf{theora\_\-comment\_\-init} (\bf{theora\_\-comment} $\ast$tc)
+\begin{CompactList}\small\item\em Initialize an allocated \doxyref{theora\_\-comment}{p.}{structtheora__comment} structure. \item\end{CompactList}\item 
+void \bf{theora\_\-comment\_\-add} (\bf{theora\_\-comment} $\ast$tc, char $\ast$comment)
+\begin{CompactList}\small\item\em Add a comment to an initialized \doxyref{theora\_\-comment}{p.}{structtheora__comment} structure. \item\end{CompactList}\item 
+void \bf{theora\_\-comment\_\-add\_\-tag} (\bf{theora\_\-comment} $\ast$tc, char $\ast$tag, char $\ast$value)
+\begin{CompactList}\small\item\em Add a comment to an initialized \doxyref{theora\_\-comment}{p.}{structtheora__comment} structure. \item\end{CompactList}\item 
+char $\ast$ \bf{theora\_\-comment\_\-query} (\bf{theora\_\-comment} $\ast$tc, char $\ast$tag, int count)
+\begin{CompactList}\small\item\em Look up a comment value by tag. \item\end{CompactList}\item 
+int \bf{theora\_\-comment\_\-query\_\-count} (\bf{theora\_\-comment} $\ast$tc, char $\ast$tag)
+\begin{CompactList}\small\item\em Look up the number of instances of a tag. \item\end{CompactList}\item 
+void \bf{theora\_\-comment\_\-clear} (\bf{theora\_\-comment} $\ast$tc)
+\begin{CompactList}\small\item\em Clear an allocated \doxyref{theora\_\-comment}{p.}{structtheora__comment} struct so that it can be freed. \item\end{CompactList}\item 
+int \bf{theora\_\-control} (\bf{theora\_\-state} $\ast$th, int req, void $\ast$buf, size\_\-t buf\_\-sz)
+\begin{CompactList}\small\item\em Encoder control function. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\index{oldfuncs@{oldfuncs}!OC_BADHEADER@{OC\_\-BADHEADER}}
+\index{OC_BADHEADER@{OC\_\-BADHEADER}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define OC\_\-BADHEADER~-20}\label{group__oldfuncs_g809cbad2eb36be17a235a3cadfb737ba}
+
+
+Header packet was corrupt/invalid. 
+
+\index{oldfuncs@{oldfuncs}!OC_BADPACKET@{OC\_\-BADPACKET}}
+\index{OC_BADPACKET@{OC\_\-BADPACKET}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define OC\_\-BADPACKET~-24}\label{group__oldfuncs_g117774c062a63dfad2a5b4d092fa2bb1}
+
+
+Packet is corrupt. 
+
+\index{oldfuncs@{oldfuncs}!OC_DISABLED@{OC\_\-DISABLED}}
+\index{OC_DISABLED@{OC\_\-DISABLED}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define OC\_\-DISABLED~-11}\label{group__oldfuncs_g38b9fa0af856d5930c534db26e2ac2d1}
+
+
+Requested action is disabled. 
+
+\index{oldfuncs@{oldfuncs}!OC_DUPFRAME@{OC\_\-DUPFRAME}}
+\index{OC_DUPFRAME@{OC\_\-DUPFRAME}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define OC\_\-DUPFRAME~1}\label{group__oldfuncs_g84a8d2f5080ad62b415a4e7551941cbb}
+
+
+Packet is a dropped frame. 
+
+\index{oldfuncs@{oldfuncs}!OC_EINVAL@{OC\_\-EINVAL}}
+\index{OC_EINVAL@{OC\_\-EINVAL}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define OC\_\-EINVAL~-10}\label{group__oldfuncs_g43d15091b1a03a734a124e9a04d3be55}
+
+
+Library encountered invalid internal data. 
+
+\index{oldfuncs@{oldfuncs}!OC_FAULT@{OC\_\-FAULT}}
+\index{OC_FAULT@{OC\_\-FAULT}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define OC\_\-FAULT~-1}\label{group__oldfuncs_ga4370e13ed3aea6441ccf69dcab2506e}
+
+
+General failure. 
+
+\index{oldfuncs@{oldfuncs}!OC_IMPL@{OC\_\-IMPL}}
+\index{OC_IMPL@{OC\_\-IMPL}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define OC\_\-IMPL~-23}\label{group__oldfuncs_g895dc2597b3bf9c97bf7701c6eff5b0c}
+
+
+Feature or action not implemented. 
+
+\index{oldfuncs@{oldfuncs}!OC_NEWPACKET@{OC\_\-NEWPACKET}}
+\index{OC_NEWPACKET@{OC\_\-NEWPACKET}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define OC\_\-NEWPACKET~-25}\label{group__oldfuncs_g60be4dc92c933eac3542bce3ce076496}
+
+
+Packet is an (ignorable) unhandled extension. 
+
+\index{oldfuncs@{oldfuncs}!OC_NOTFORMAT@{OC\_\-NOTFORMAT}}
+\index{OC_NOTFORMAT@{OC\_\-NOTFORMAT}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define OC\_\-NOTFORMAT~-21}\label{group__oldfuncs_g9558d6d9eacd2273c8da27f945d725ad}
+
+
+Packet is not a theora packet. 
+
+\index{oldfuncs@{oldfuncs}!OC_VERSION@{OC\_\-VERSION}}
+\index{OC_VERSION@{OC\_\-VERSION}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define OC\_\-VERSION~-22}\label{group__oldfuncs_g4611cfd61160405721d1e2ab0ec2564b}
+
+
+Bitstream version is not handled. 
+
+\index{oldfuncs@{oldfuncs}!TH_DECCTL_GET_PPLEVEL_MAX@{TH\_\-DECCTL\_\-GET\_\-PPLEVEL\_\-MAX}}
+\index{TH_DECCTL_GET_PPLEVEL_MAX@{TH\_\-DECCTL\_\-GET\_\-PPLEVEL\_\-MAX}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TH\_\-DECCTL\_\-GET\_\-PPLEVEL\_\-MAX~(1)}\label{group__oldfuncs_gb31f251c9319f2140d247585d30b3d07}
+
+
+Get the maximum post-processing level. 
+
+The decoder supports a post-processing filter that can improve the appearance of the decoded images. This returns the highest level setting for this post-processor, corresponding to maximum improvement and computational expense. \index{oldfuncs@{oldfuncs}!TH_DECCTL_SET_GRANPOS@{TH\_\-DECCTL\_\-SET\_\-GRANPOS}}
+\index{TH_DECCTL_SET_GRANPOS@{TH\_\-DECCTL\_\-SET\_\-GRANPOS}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TH\_\-DECCTL\_\-SET\_\-GRANPOS~(5)}\label{group__oldfuncs_g1e870c654d35394f0d490045df04e0f5}
+
+
+Set the granule position. 
+
+Call this after a seek, to update the internal granulepos in the decoder, to insure that subsequent frames are marked properly. If you track timestamps yourself and do not use the granule postion returned by the decoder, then you do not need to use this control. \index{oldfuncs@{oldfuncs}!TH_DECCTL_SET_PPLEVEL@{TH\_\-DECCTL\_\-SET\_\-PPLEVEL}}
+\index{TH_DECCTL_SET_PPLEVEL@{TH\_\-DECCTL\_\-SET\_\-PPLEVEL}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TH\_\-DECCTL\_\-SET\_\-PPLEVEL~(3)}\label{group__oldfuncs_g87774c35e1a755a84e2d705b38ebef0d}
+
+
+Set the post-processing level. 
+
+Sets the level of post-processing to use when decoding the compressed stream. This must be a value between zero (off) and the maximum returned by TH\_\-DECCTL\_\-GET\_\-PPLEVEL\_\-MAX. \index{oldfuncs@{oldfuncs}!TH_ENCCTL_GET_SPLEVEL_MAX@{TH\_\-ENCCTL\_\-GET\_\-SPLEVEL\_\-MAX}}
+\index{TH_ENCCTL_GET_SPLEVEL_MAX@{TH\_\-ENCCTL\_\-GET\_\-SPLEVEL\_\-MAX}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TH\_\-ENCCTL\_\-GET\_\-SPLEVEL\_\-MAX~(12)}\label{group__oldfuncs_g9baf5bdd206e80c78a8fd44687e89783}
+
+
+Gets the maximum speed level. 
+
+Higher speed levels favor quicker encoding over better quality per bit. Depending on the encoding mode, and the internal algorithms used, quality may actually improve, but in this case bitrate will also likely increase. In any case, overall rate/distortion performance will probably decrease. The maximum value, and the meaning of each value, may change depending on the current encoding mode (VBR vs. CQI, etc.).
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\rightarrow$} {\em buf}]int: The maximum encoding speed level. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Return values:]
+\begin{description}
+\item[{\em OC\_\-FAULT}]{\em \doxyref{theora\_\-state}{p.}{structtheora__state}\/} or {\em buf\/} is {\tt NULL}. \item[{\em OC\_\-EINVAL}]{\em buf\_\-sz\/} is not {\tt sizeof(int)}. \item[{\em OC\_\-IMPL}]Not supported by this implementation in the current encoding mode. \end{description}
+\end{Desc}
+\index{oldfuncs@{oldfuncs}!TH_ENCCTL_SET_KEYFRAME_FREQUENCY_FORCE@{TH\_\-ENCCTL\_\-SET\_\-KEYFRAME\_\-FREQUENCY\_\-FORCE}}
+\index{TH_ENCCTL_SET_KEYFRAME_FREQUENCY_FORCE@{TH\_\-ENCCTL\_\-SET\_\-KEYFRAME\_\-FREQUENCY\_\-FORCE}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TH\_\-ENCCTL\_\-SET\_\-KEYFRAME\_\-FREQUENCY\_\-FORCE~(4)}\label{group__oldfuncs_g27e755e15b4b5604c54974b304037a49}
+
+
+Sets the maximum distance between key frames. 
+
+This can be changed during an encode, but will be bounded by {\tt 1$<$$<$\doxyref{th\_\-info::keyframe\_\-granule\_\-shift}{p.}{structth__info_693ca4ab11fbc0c3f32594b4bb8766ed}}. If it is set before encoding begins, \doxyref{th\_\-info::keyframe\_\-granule\_\-shift}{p.}{structth__info_693ca4ab11fbc0c3f32594b4bb8766ed} will be enlarged appropriately.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftarrow$} {\em buf}]{\tt ogg\_\-uint32\_\-t}: The maximum distance between key frames. \item[\mbox{$\rightarrow$} {\em buf}]{\tt ogg\_\-uint32\_\-t}: The actual maximum distance set. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Return values:]
+\begin{description}
+\item[{\em OC\_\-FAULT}]{\em \doxyref{theora\_\-state}{p.}{structtheora__state}\/} or {\em buf\/} is {\tt NULL}. \item[{\em OC\_\-EINVAL}]{\em buf\_\-sz\/} is not {\tt sizeof(ogg\_\-uint32\_\-t)}. \item[{\em OC\_\-IMPL}]Not supported by this implementation. \end{description}
+\end{Desc}
+\index{oldfuncs@{oldfuncs}!TH_ENCCTL_SET_QUANT_PARAMS@{TH\_\-ENCCTL\_\-SET\_\-QUANT\_\-PARAMS}}
+\index{TH_ENCCTL_SET_QUANT_PARAMS@{TH\_\-ENCCTL\_\-SET\_\-QUANT\_\-PARAMS}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TH\_\-ENCCTL\_\-SET\_\-QUANT\_\-PARAMS~(2)}\label{group__oldfuncs_g3befcdd66678f8d27034f9c4b16d1b9c}
+
+
+Sets the quantization parameters to use. 
+
+The parameters are copied, not stored by reference, so they can be freed after this call. {\tt NULL} may be specified to revert to the default parameters.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftarrow$} {\em buf}]\doxyref{th\_\-quant\_\-info}{p.}{structth__quant__info} \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Return values:]
+\begin{description}
+\item[{\em OC\_\-FAULT}]{\em \doxyref{theora\_\-state}{p.}{structtheora__state}\/} is {\tt NULL}. \item[{\em OC\_\-EINVAL}]Encoding has already begun, the quantization parameters are not acceptable to this version of the encoder, {\em buf\/} is {\tt NULL} and {\em buf\_\-sz\/} is not zero, or {\em buf\/} is non-{\tt NULL} and {\em buf\_\-sz\/} is not {\tt sizeof(\doxyref{th\_\-quant\_\-info}{p.}{structth__quant__info})}. \item[{\em OC\_\-IMPL}]Not supported by this implementation. \end{description}
+\end{Desc}
+\index{oldfuncs@{oldfuncs}!TH_ENCCTL_SET_SPLEVEL@{TH\_\-ENCCTL\_\-SET\_\-SPLEVEL}}
+\index{TH_ENCCTL_SET_SPLEVEL@{TH\_\-ENCCTL\_\-SET\_\-SPLEVEL}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TH\_\-ENCCTL\_\-SET\_\-SPLEVEL~(14)}\label{group__oldfuncs_gbd9fbcb6a25a77d991d3620164fe59d6}
+
+
+Sets the speed level. 
+
+By default a speed value of 1 is used.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftarrow$} {\em buf}]int: The new encoding speed level. 0 is slowest, larger values use less CPU. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Return values:]
+\begin{description}
+\item[{\em OC\_\-FAULT}]{\em \doxyref{theora\_\-state}{p.}{structtheora__state}\/} or {\em buf\/} is {\tt NULL}. \item[{\em OC\_\-EINVAL}]{\em buf\_\-sz\/} is not {\tt sizeof(int)}, or the encoding speed level is out of bounds. The maximum encoding speed level may be implementation- and encoding mode-specific, and can be obtained via \doxyref{TH\_\-ENCCTL\_\-GET\_\-SPLEVEL\_\-MAX}{p.}{theoraenc_8h_9baf5bdd206e80c78a8fd44687e89783}. \item[{\em OC\_\-IMPL}]Not supported by this implementation in the current encoding mode. \end{description}
+\end{Desc}
+\index{oldfuncs@{oldfuncs}!TH_ENCCTL_SET_VP3_COMPATIBLE@{TH\_\-ENCCTL\_\-SET\_\-VP3\_\-COMPATIBLE}}
+\index{TH_ENCCTL_SET_VP3_COMPATIBLE@{TH\_\-ENCCTL\_\-SET\_\-VP3\_\-COMPATIBLE}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TH\_\-ENCCTL\_\-SET\_\-VP3\_\-COMPATIBLE~(10)}\label{group__oldfuncs_g382d685a39a34d8e6ba76b00d804efd8}
+
+
+Disables any encoder features that would prevent lossless transcoding back to VP3. 
+
+This primarily means disabling block-level QI values and not using 4MV mode when any of the luma blocks in a macro block are not coded. It also includes using the VP3 quantization tables and Huffman codes; if you set them explicitly after calling this function, the resulting stream will not be VP3-compatible. If you enable VP3-compatibility when encoding 4:2:2 or 4:4:4 source material, or when using a picture region smaller than the full frame (e.g. a non-multiple-of-16 width or height), then non-VP3 bitstream features will still be disabled, but the stream will still not be VP3-compatible, as VP3 was not capable of encoding such formats. If you call this after encoding has already begun, then the quantization tables and codebooks cannot be changed, but the frame-level features will be enabled or disabled as requested.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftarrow$} {\em buf}]{\tt int}: a non-zero value to enable VP3 compatibility, or 0 to disable it (the default). \item[\mbox{$\rightarrow$} {\em buf}]{\tt int}: 1 if all bitstream features required for VP3-compatibility could be set, and 0 otherwise. The latter will be returned if the pixel format is not 4:2:0, the picture region is smaller than the full frame, or if encoding has begun, preventing the quantization tables and codebooks from being set. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Return values:]
+\begin{description}
+\item[{\em OC\_\-FAULT}]{\em \doxyref{theora\_\-state}{p.}{structtheora__state}\/} or {\em buf\/} is {\tt NULL}. \item[{\em OC\_\-EINVAL}]{\em buf\_\-sz\/} is not {\tt sizeof(int)}. \item[{\em OC\_\-IMPL}]Not supported by this implementation. \end{description}
+\end{Desc}
+
+
+\subsection{Enumeration Type Documentation}
+\index{oldfuncs@{oldfuncs}!theora_colorspace@{theora\_\-colorspace}}
+\index{theora_colorspace@{theora\_\-colorspace}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}enum \bf{theora\_\-colorspace}}\label{group__oldfuncs_ga567da4ce591f7373149ce3ef3acdac9}
+
+
+A Colorspace. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{OC_CS_UNSPECIFIED@{OC\_\-CS\_\-UNSPECIFIED}!oldfuncs@{oldfuncs}}\index{oldfuncs@{oldfuncs}!OC_CS_UNSPECIFIED@{OC\_\-CS\_\-UNSPECIFIED}}\item[{\em 
+OC\_\-CS\_\-UNSPECIFIED\label{group__oldfuncs_gga567da4ce591f7373149ce3ef3acdac9bf217cf83d7d7cbf73295e6689f5cf5f}
+}]The colorspace is unknown or unspecified. \index{OC_CS_ITU_REC_470M@{OC\_\-CS\_\-ITU\_\-REC\_\-470M}!oldfuncs@{oldfuncs}}\index{oldfuncs@{oldfuncs}!OC_CS_ITU_REC_470M@{OC\_\-CS\_\-ITU\_\-REC\_\-470M}}\item[{\em 
+OC\_\-CS\_\-ITU\_\-REC\_\-470M\label{group__oldfuncs_gga567da4ce591f7373149ce3ef3acdac9b20c9851a21ab148fef0bf2c00c0a294}
+}]This is the best option for 'NTSC' content. \index{OC_CS_ITU_REC_470BG@{OC\_\-CS\_\-ITU\_\-REC\_\-470BG}!oldfuncs@{oldfuncs}}\index{oldfuncs@{oldfuncs}!OC_CS_ITU_REC_470BG@{OC\_\-CS\_\-ITU\_\-REC\_\-470BG}}\item[{\em 
+OC\_\-CS\_\-ITU\_\-REC\_\-470BG\label{group__oldfuncs_gga567da4ce591f7373149ce3ef3acdac904f8fa2da26f9ec513f514163705666a}
+}]This is the best option for 'PAL' content. \index{OC_CS_NSPACES@{OC\_\-CS\_\-NSPACES}!oldfuncs@{oldfuncs}}\index{oldfuncs@{oldfuncs}!OC_CS_NSPACES@{OC\_\-CS\_\-NSPACES}}\item[{\em 
+OC\_\-CS\_\-NSPACES\label{group__oldfuncs_gga567da4ce591f7373149ce3ef3acdac9640b572f11fa7102d434e1c605aaa186}
+}]This marks the end of the defined colorspaces. \end{description}
+\end{Desc}
+
+\index{oldfuncs@{oldfuncs}!theora_pixelformat@{theora\_\-pixelformat}}
+\index{theora_pixelformat@{theora\_\-pixelformat}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}enum \bf{theora\_\-pixelformat}}\label{group__oldfuncs_ge169da05bfaaf4e964a6866552d45079}
+
+
+A Chroma subsampling. 
+
+These enumerate the available chroma subsampling options supported by the theora format. See Section 4.4 of the specification for exact definitions. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{OC_PF_420@{OC\_\-PF\_\-420}!oldfuncs@{oldfuncs}}\index{oldfuncs@{oldfuncs}!OC_PF_420@{OC\_\-PF\_\-420}}\item[{\em 
+OC\_\-PF\_\-420\label{group__oldfuncs_gge169da05bfaaf4e964a6866552d450794e451af01be2645511b0e431f5225d2b}
+}]Chroma subsampling by 2 in each direction (4:2:0). \index{OC_PF_RSVD@{OC\_\-PF\_\-RSVD}!oldfuncs@{oldfuncs}}\index{oldfuncs@{oldfuncs}!OC_PF_RSVD@{OC\_\-PF\_\-RSVD}}\item[{\em 
+OC\_\-PF\_\-RSVD\label{group__oldfuncs_gge169da05bfaaf4e964a6866552d450797d21c63341ad299766839c83ed1216eb}
+}]Reserved value. \index{OC_PF_422@{OC\_\-PF\_\-422}!oldfuncs@{oldfuncs}}\index{oldfuncs@{oldfuncs}!OC_PF_422@{OC\_\-PF\_\-422}}\item[{\em 
+OC\_\-PF\_\-422\label{group__oldfuncs_gge169da05bfaaf4e964a6866552d4507936a88c55b7ddd5aedeac2d61d57fee5b}
+}]Horizonatal chroma subsampling by 2 (4:2:2). \index{OC_PF_444@{OC\_\-PF\_\-444}!oldfuncs@{oldfuncs}}\index{oldfuncs@{oldfuncs}!OC_PF_444@{OC\_\-PF\_\-444}}\item[{\em 
+OC\_\-PF\_\-444\label{group__oldfuncs_gge169da05bfaaf4e964a6866552d450791d5c6d1b0365e06b4a87880b7825f044}
+}]No chroma subsampling at all (4:4:4). \end{description}
+\end{Desc}
+
+
+
+\subsection{Function Documentation}
+\index{oldfuncs@{oldfuncs}!theora_clear@{theora\_\-clear}}
+\index{theora_clear@{theora\_\-clear}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void theora\_\-clear (\bf{theora\_\-state} $\ast$ {\em t})}\label{group__oldfuncs_gb252d5d81b925136dda72e8f1c09c5eb}
+
+
+Free all internal data associated with a \doxyref{theora\_\-state}{p.}{structtheora__state} handle. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em t}]A \doxyref{theora\_\-state}{p.}{structtheora__state} handle. \end{description}
+\end{Desc}
+\index{oldfuncs@{oldfuncs}!theora_comment_add@{theora\_\-comment\_\-add}}
+\index{theora_comment_add@{theora\_\-comment\_\-add}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void theora\_\-comment\_\-add (\bf{theora\_\-comment} $\ast$ {\em tc}, char $\ast$ {\em comment})}\label{group__oldfuncs_g650642ed23894e41109bbc42ec393ed4}
+
+
+Add a comment to an initialized \doxyref{theora\_\-comment}{p.}{structtheora__comment} structure. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em tc}]A previously initialized theora comment structure \item[{\em comment}]A null-terminated string encoding the comment in the form \char`\"{}TAG=the value\char`\"{}\end{description}
+\end{Desc}
+Neither \doxyref{theora\_\-comment\_\-add()}{p.}{group__oldfuncs_g650642ed23894e41109bbc42ec393ed4} nor \doxyref{theora\_\-comment\_\-add\_\-tag()}{p.}{group__oldfuncs_g339bd80b5bf4bb168b7052d8ec0b5a92} support comments containing null values, although the bitstream format supports this. To add such comments you will need to manipulate the \doxyref{theora\_\-comment}{p.}{structtheora__comment} structure directly. \index{oldfuncs@{oldfuncs}!theora_comment_add_tag@{theora\_\-comment\_\-add\_\-tag}}
+\index{theora_comment_add_tag@{theora\_\-comment\_\-add\_\-tag}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void theora\_\-comment\_\-add\_\-tag (\bf{theora\_\-comment} $\ast$ {\em tc}, char $\ast$ {\em tag}, char $\ast$ {\em value})}\label{group__oldfuncs_g339bd80b5bf4bb168b7052d8ec0b5a92}
+
+
+Add a comment to an initialized \doxyref{theora\_\-comment}{p.}{structtheora__comment} structure. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em tc}]A previously initialized theora comment structure \item[{\em tag}]A null-terminated string containing the tag associated with the comment. \item[{\em value}]The corresponding value as a null-terminated string\end{description}
+\end{Desc}
+Neither \doxyref{theora\_\-comment\_\-add()}{p.}{group__oldfuncs_g650642ed23894e41109bbc42ec393ed4} nor \doxyref{theora\_\-comment\_\-add\_\-tag()}{p.}{group__oldfuncs_g339bd80b5bf4bb168b7052d8ec0b5a92} support comments containing null values, although the bitstream format supports this. To add such comments you will need to manipulate the \doxyref{theora\_\-comment}{p.}{structtheora__comment} structure directly. \index{oldfuncs@{oldfuncs}!theora_comment_clear@{theora\_\-comment\_\-clear}}
+\index{theora_comment_clear@{theora\_\-comment\_\-clear}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void theora\_\-comment\_\-clear (\bf{theora\_\-comment} $\ast$ {\em tc})}\label{group__oldfuncs_g04c07c2eefba3a433e43f9fbde14719f}
+
+
+Clear an allocated \doxyref{theora\_\-comment}{p.}{structtheora__comment} struct so that it can be freed. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em tc}]An allocated \doxyref{theora\_\-comment}{p.}{structtheora__comment} structure. \end{description}
+\end{Desc}
+\index{oldfuncs@{oldfuncs}!theora_comment_init@{theora\_\-comment\_\-init}}
+\index{theora_comment_init@{theora\_\-comment\_\-init}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void theora\_\-comment\_\-init (\bf{theora\_\-comment} $\ast$ {\em tc})}\label{group__oldfuncs_g811b92785df3bdbbebb3de612d9d6ce0}
+
+
+Initialize an allocated \doxyref{theora\_\-comment}{p.}{structtheora__comment} structure. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em tc}]An allocated \doxyref{theora\_\-comment}{p.}{structtheora__comment} structure \end{description}
+\end{Desc}
+\index{oldfuncs@{oldfuncs}!theora_comment_query@{theora\_\-comment\_\-query}}
+\index{theora_comment_query@{theora\_\-comment\_\-query}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ theora\_\-comment\_\-query (\bf{theora\_\-comment} $\ast$ {\em tc}, char $\ast$ {\em tag}, int {\em count})}\label{group__oldfuncs_g4361f6001abb5c83c36a2ddfb648a8dc}
+
+
+Look up a comment value by tag. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em tc}]Tn initialized \doxyref{theora\_\-comment}{p.}{structtheora__comment} structure \item[{\em tag}]The tag to look up \item[{\em count}]The instance of the tag. The same tag can appear multiple times, each with a distinct and ordered value, so an index is required to retrieve them all. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]A pointer to the queried tag's value \end{Desc}
+\begin{Desc}
+\item[Return values:]
+\begin{description}
+\item[{\em NULL}]No matching tag is found\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Note:]Use \doxyref{theora\_\-comment\_\-query\_\-count()}{p.}{group__oldfuncs_g10f66a3c752442a3e0c0098e0f88df8b} to get the legal range for the count parameter. \end{Desc}
+\index{oldfuncs@{oldfuncs}!theora_comment_query_count@{theora\_\-comment\_\-query\_\-count}}
+\index{theora_comment_query_count@{theora\_\-comment\_\-query\_\-count}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int theora\_\-comment\_\-query\_\-count (\bf{theora\_\-comment} $\ast$ {\em tc}, char $\ast$ {\em tag})}\label{group__oldfuncs_g10f66a3c752442a3e0c0098e0f88df8b}
+
+
+Look up the number of instances of a tag. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em tc}]An initialized \doxyref{theora\_\-comment}{p.}{structtheora__comment} structure \item[{\em tag}]The tag to look up \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The number on instances of a particular tag.\end{Desc}
+Call this first when querying for a specific tag and then interate over the number of instances with separate calls to \doxyref{theora\_\-comment\_\-query()}{p.}{group__oldfuncs_g4361f6001abb5c83c36a2ddfb648a8dc} to retrieve all instances in order. \index{oldfuncs@{oldfuncs}!theora_control@{theora\_\-control}}
+\index{theora_control@{theora\_\-control}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int theora\_\-control (\bf{theora\_\-state} $\ast$ {\em th}, int {\em req}, void $\ast$ {\em buf}, size\_\-t {\em buf\_\-sz})}\label{group__oldfuncs_g186773db3bc8cd550047e7df1b2ba2c9}
+
+
+Encoder control function. 
+
+This is used to provide advanced control the encoding process. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em th}]A \doxyref{theora\_\-state}{p.}{structtheora__state} handle. \item[{\em req}]The control code to process. See \doxyref{the list of available }{p.}{group__oldfuncs_encctlcodes_old} control codes\char`\"{} for details. \item[{\em buf}]The parameters for this control code. \item[{\em buf\_\-sz}]The size of the parameter buffer. \end{description}
+\end{Desc}
+\index{oldfuncs@{oldfuncs}!theora_decode_header@{theora\_\-decode\_\-header}}
+\index{theora_decode_header@{theora\_\-decode\_\-header}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int theora\_\-decode\_\-header (\bf{theora\_\-info} $\ast$ {\em ci}, \bf{theora\_\-comment} $\ast$ {\em cc}, ogg\_\-packet $\ast$ {\em op})}\label{group__oldfuncs_g02915e63c1bd733ee291f577a8b75a82}
+
+
+Decode an Ogg packet, with the expectation that the packet contains an initial header, comment data or codebook tables. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em ci}]A \doxyref{theora\_\-info}{p.}{structtheora__info} structure to fill. This must have been previously initialized with \doxyref{theora\_\-info\_\-init()}{p.}{group__oldfuncs_g3091c87d48f1faba018c5956379a6d90}. If {\em op\/} contains an initial header, \doxyref{theora\_\-decode\_\-header()}{p.}{group__oldfuncs_g02915e63c1bd733ee291f577a8b75a82} will fill {\em ci\/} with the parsed header values. If {\em op\/} contains codebook tables, \doxyref{theora\_\-decode\_\-header()}{p.}{group__oldfuncs_g02915e63c1bd733ee291f577a8b75a82} will parse these and attach an internal representation to {\em ci-$>$codec\_\-setup\/}. \item[{\em cc}]A \doxyref{theora\_\-comment}{p.}{structtheora__comment} structure to fill. If {\em op\/} contains comment data, \doxyref{theora\_\-decode\_\-header()}{p.}{group__oldfuncs_g02915e63c1bd733ee291f577a8b75a82} will fill {\em cc\/} with the parsed comments. \item[{\em op}]An ogg\_\-packet structure which you expect contains an initial header, comment data or codebook tables.\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Return values:]
+\begin{description}
+\item[{\em OC\_\-BADHEADER}]{\em op\/} is NULL; OR the first byte of {\em op-$>$packet\/} has the signature of an initial packet, but op is not a b\_\-o\_\-s packet; OR this packet has the signature of an initial header packet, but an initial header packet has already been seen; OR this packet has the signature of a comment packet, but the initial header has not yet been seen; OR this packet has the signature of a comment packet, but contains invalid data; OR this packet has the signature of codebook tables, but the initial header or comments have not yet been seen; OR this packet has the signature of codebook tables, but contains invalid data; OR the stream being decoded has a compatible version but this packet does not have the signature of a theora initial header, comments, or codebook packet \item[{\em OC\_\-VERSION}]The packet data of {\em op\/} is an initial header with a version which is incompatible with this version of libtheora. \item[{\em OC\_\-NEWPACKET}]the stream being decoded has an incompatible (future) version and contains an unknown signature. \item[{\em 0}]Success\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Note:]The normal usage is that \doxyref{theora\_\-decode\_\-header()}{p.}{group__oldfuncs_g02915e63c1bd733ee291f577a8b75a82} be called on the first three packets of a theora logical bitstream in succession. \end{Desc}
+\index{oldfuncs@{oldfuncs}!theora_decode_init@{theora\_\-decode\_\-init}}
+\index{theora_decode_init@{theora\_\-decode\_\-init}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int theora\_\-decode\_\-init (\bf{theora\_\-state} $\ast$ {\em th}, \bf{theora\_\-info} $\ast$ {\em c})}\label{group__oldfuncs_g264907c66003799ff77ecbd09eb33d2c}
+
+
+Initialize a \doxyref{theora\_\-state}{p.}{structtheora__state} handle for decoding. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em th}]The \doxyref{theora\_\-state}{p.}{structtheora__state} handle to initialize. \item[{\em c}]A \doxyref{theora\_\-info}{p.}{structtheora__info} struct filled with the desired decoding parameters. This is of course usually obtained from a previous call to \doxyref{theora\_\-decode\_\-header()}{p.}{group__oldfuncs_g02915e63c1bd733ee291f577a8b75a82}. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Return values:]
+\begin{description}
+\item[{\em 0}]Success \end{description}
+\end{Desc}
+\index{oldfuncs@{oldfuncs}!theora_decode_packetin@{theora\_\-decode\_\-packetin}}
+\index{theora_decode_packetin@{theora\_\-decode\_\-packetin}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int theora\_\-decode\_\-packetin (\bf{theora\_\-state} $\ast$ {\em th}, ogg\_\-packet $\ast$ {\em op})}\label{group__oldfuncs_ga65a9e53b46fd54ab344bd599fa96975}
+
+
+Input a packet containing encoded data into the theora decoder. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em th}]A \doxyref{theora\_\-state}{p.}{structtheora__state} handle previously initialized for decoding. \item[{\em op}]An ogg\_\-packet containing encoded theora data. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Return values:]
+\begin{description}
+\item[{\em 0}]Success \item[{\em OC\_\-BADPACKET}]{\em op\/} does not contain encoded video data \end{description}
+\end{Desc}
+\index{oldfuncs@{oldfuncs}!theora_decode_YUVout@{theora\_\-decode\_\-YUVout}}
+\index{theora_decode_YUVout@{theora\_\-decode\_\-YUVout}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int theora\_\-decode\_\-YUVout (\bf{theora\_\-state} $\ast$ {\em th}, \bf{yuv\_\-buffer} $\ast$ {\em yuv})}\label{group__oldfuncs_g09d47c80e1e94bff0a46a496816b8daa}
+
+
+Output the next available frame of decoded YUV data. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em th}]A \doxyref{theora\_\-state}{p.}{structtheora__state} handle previously initialized for decoding. \item[{\em yuv}]A \doxyref{yuv\_\-buffer}{p.}{structyuv__buffer} in which libtheora should place the decoded data. Note that the buffer struct itself is allocated by the user, but that the luma and chroma pointers will be filled in by the library. Also note that these luma and chroma regions should be considered read-only by the user. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Return values:]
+\begin{description}
+\item[{\em 0}]Success \end{description}
+\end{Desc}
+\index{oldfuncs@{oldfuncs}!theora_encode_comment@{theora\_\-encode\_\-comment}}
+\index{theora_encode_comment@{theora\_\-encode\_\-comment}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int theora\_\-encode\_\-comment (\bf{theora\_\-comment} $\ast$ {\em tc}, ogg\_\-packet $\ast$ {\em op})}\label{group__oldfuncs_g45e8db0713eaaca0f1144f3724cb834a}
+
+
+Request a comment header packet from provided metadata. 
+
+A pointer to the comment data is placed in a user-provided ogg\_\-packet structure. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em tc}]A \doxyref{theora\_\-comment}{p.}{structtheora__comment} structure filled with the desired metadata \item[{\em op}]An ogg\_\-packet structure to fill. libtheora will set all elements of this structure, including a pointer to the encoded comment data. The memory for the comment data is owned by libtheora. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Return values:]
+\begin{description}
+\item[{\em 0}]Success \end{description}
+\end{Desc}
+\index{oldfuncs@{oldfuncs}!theora_encode_header@{theora\_\-encode\_\-header}}
+\index{theora_encode_header@{theora\_\-encode\_\-header}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int theora\_\-encode\_\-header (\bf{theora\_\-state} $\ast$ {\em t}, ogg\_\-packet $\ast$ {\em op})}\label{group__oldfuncs_g451feb58d6bde726edbae193689887be}
+
+
+Request a packet containing the initial header. 
+
+A pointer to the header data is placed in a user-provided ogg\_\-packet structure. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em t}]A \doxyref{theora\_\-state}{p.}{structtheora__state} handle previously initialized for encoding. \item[{\em op}]An ogg\_\-packet structure to fill. libtheora will set all elements of this structure, including a pointer to the header data. The memory for the header data is owned by libtheora. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Return values:]
+\begin{description}
+\item[{\em 0}]Success \end{description}
+\end{Desc}
+\index{oldfuncs@{oldfuncs}!theora_encode_init@{theora\_\-encode\_\-init}}
+\index{theora_encode_init@{theora\_\-encode\_\-init}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int theora\_\-encode\_\-init (\bf{theora\_\-state} $\ast$ {\em th}, \bf{theora\_\-info} $\ast$ {\em ti})}\label{group__oldfuncs_g0f7ad4d4b2343278cb4ba8fb2bd5109a}
+
+
+Initialize the theora encoder. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em th}]The \doxyref{theora\_\-state}{p.}{structtheora__state} handle to initialize for encoding. \item[{\em ti}]A \doxyref{theora\_\-info}{p.}{structtheora__info} struct filled with the desired encoding parameters. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Return values:]
+\begin{description}
+\item[{\em 0}]Success \end{description}
+\end{Desc}
+\index{oldfuncs@{oldfuncs}!theora_encode_packetout@{theora\_\-encode\_\-packetout}}
+\index{theora_encode_packetout@{theora\_\-encode\_\-packetout}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int theora\_\-encode\_\-packetout (\bf{theora\_\-state} $\ast$ {\em t}, int {\em last\_\-p}, ogg\_\-packet $\ast$ {\em op})}\label{group__oldfuncs_g5f4929677a735bc2198c2309d235f1b3}
+
+
+Request the next packet of encoded video. 
+
+The encoded data is placed in a user-provided ogg\_\-packet structure. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em t}]A \doxyref{theora\_\-state}{p.}{structtheora__state} handle previously initialized for encoding. \item[{\em last\_\-p}]whether this is the last packet the encoder should produce. \item[{\em op}]An ogg\_\-packet structure to fill. libtheora will set all elements of this structure, including a pointer to encoded data. The memory for the encoded data is owned by libtheora. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Return values:]
+\begin{description}
+\item[{\em 0}]No internal storage exists OR no packet is ready \item[{\em -1}]The encoding process has completed \item[{\em 1}]Success \end{description}
+\end{Desc}
+\index{oldfuncs@{oldfuncs}!theora_encode_tables@{theora\_\-encode\_\-tables}}
+\index{theora_encode_tables@{theora\_\-encode\_\-tables}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int theora\_\-encode\_\-tables (\bf{theora\_\-state} $\ast$ {\em t}, ogg\_\-packet $\ast$ {\em op})}\label{group__oldfuncs_g5085baf20855b283fa01fc948505d9d2}
+
+
+Request a packet containing the codebook tables for the stream. 
+
+A pointer to the codebook data is placed in a user-provided ogg\_\-packet structure. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em t}]A \doxyref{theora\_\-state}{p.}{structtheora__state} handle previously initialized for encoding. \item[{\em op}]An ogg\_\-packet structure to fill. libtheora will set all elements of this structure, including a pointer to the codebook data. The memory for the header data is owned by libtheora. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Return values:]
+\begin{description}
+\item[{\em 0}]Success \end{description}
+\end{Desc}
+\index{oldfuncs@{oldfuncs}!theora_encode_YUVin@{theora\_\-encode\_\-YUVin}}
+\index{theora_encode_YUVin@{theora\_\-encode\_\-YUVin}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int theora\_\-encode\_\-YUVin (\bf{theora\_\-state} $\ast$ {\em t}, \bf{yuv\_\-buffer} $\ast$ {\em yuv})}\label{group__oldfuncs_gc0d33d896ca70cedfc94c5986d947078}
+
+
+Submit a YUV buffer to the theora encoder. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em t}]A \doxyref{theora\_\-state}{p.}{structtheora__state} handle previously initialized for encoding. \item[{\em yuv}]A buffer of YUV data to encode. Note that both the \doxyref{yuv\_\-buffer}{p.}{structyuv__buffer} struct and the luma/chroma buffers within should be allocated by the user. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Return values:]
+\begin{description}
+\item[{\em OC\_\-EINVAL}]Encoder is not ready, or is finished. \item[{\em -1}]The size of the given frame differs from those previously input \item[{\em 0}]Success \end{description}
+\end{Desc}
+\index{oldfuncs@{oldfuncs}!theora_granule_frame@{theora\_\-granule\_\-frame}}
+\index{theora_granule_frame@{theora\_\-granule\_\-frame}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}ogg\_\-int64\_\-t theora\_\-granule\_\-frame (\bf{theora\_\-state} $\ast$ {\em th}, ogg\_\-int64\_\-t {\em granulepos})}\label{group__oldfuncs_g7bfa3ceb2fb4b41a282456c56e1dd269}
+
+
+Convert a granulepos to an absolute frame index, starting at 0. 
+
+The granulepos is interpreted in the context of a given \doxyref{theora\_\-state}{p.}{structtheora__state} handle.
+
+Note that while the granulepos encodes the frame count (i.e. starting from 1) this call returns the frame index, starting from zero. Thus One can calculate the presentation time by multiplying the index by the rate.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em th}]A previously initialized \doxyref{theora\_\-state}{p.}{structtheora__state} handle (encode or decode) \item[{\em granulepos}]The granulepos to convert. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The frame index corresponding to {\em granulepos\/}. \end{Desc}
+\begin{Desc}
+\item[Return values:]
+\begin{description}
+\item[{\em -1}]The given granulepos is undefined (i.e. negative)\end{description}
+\end{Desc}
+Thus function was added in the 1.0alpha4 release. \index{oldfuncs@{oldfuncs}!theora_granule_shift@{theora\_\-granule\_\-shift}}
+\index{theora_granule_shift@{theora\_\-granule\_\-shift}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int theora\_\-granule\_\-shift (\bf{theora\_\-info} $\ast$ {\em ti})}\label{group__oldfuncs_gcd9360e6a47139c761002410af457a02}
+
+
+Report the granulepos shift radix. 
+
+When embedded in Ogg, Theora uses a two-part granulepos, splitting the 64-bit field into two pieces. The more-significant section represents the frame count at the last keyframe, and the less-significant section represents the count of frames since the last keyframe. In this way the overall field is still non-decreasing with time, but usefully encodes a pointer to the last keyframe, which is necessary for correctly restarting decode after a seek.
+
+This function reports the number of bits used to represent the distance to the last keyframe, and thus how the granulepos field must be shifted or masked to obtain the two parts.
+
+Since libtheora returns compressed data in an ogg\_\-packet structure, this may be generally useful even if the Theora packets are not being used in an Ogg container.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em ti}]A previously initialized \doxyref{theora\_\-info}{p.}{structtheora__info} struct \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The bit shift dividing the two granulepos fields\end{Desc}
+This function was added in the 1.0alpha5 release. \index{oldfuncs@{oldfuncs}!theora_granule_time@{theora\_\-granule\_\-time}}
+\index{theora_granule_time@{theora\_\-granule\_\-time}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double theora\_\-granule\_\-time (\bf{theora\_\-state} $\ast$ {\em th}, ogg\_\-int64\_\-t {\em granulepos})}\label{group__oldfuncs_g4376358b12b9fa23ce6fe21cb5c65ac6}
+
+
+Convert a granulepos to absolute time in seconds. 
+
+The granulepos is interpreted in the context of a given \doxyref{theora\_\-state}{p.}{structtheora__state} handle, and gives the end time of a frame's presentation as used in Ogg mux ordering.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em th}]A previously initialized \doxyref{theora\_\-state}{p.}{structtheora__state} handle (encode or decode) \item[{\em granulepos}]The granulepos to convert. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The absolute time in seconds corresponding to {\em granulepos\/}. This is the \char`\"{}end time\char`\"{} for the frame, or the latest time it should be displayed. It is not the presentation time. \end{Desc}
+\begin{Desc}
+\item[Return values:]
+\begin{description}
+\item[{\em -1.}]The given granulepos is undefined (i.e. negative), or \item[{\em -1.}]The function has been disabled because floating point support is not available. \end{description}
+\end{Desc}
+\index{oldfuncs@{oldfuncs}!theora_info_clear@{theora\_\-info\_\-clear}}
+\index{theora_info_clear@{theora\_\-info\_\-clear}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void theora\_\-info\_\-clear (\bf{theora\_\-info} $\ast$ {\em c})}\label{group__oldfuncs_gba7022d58edbc4825cacad03f68b3e0d}
+
+
+Clear a \doxyref{theora\_\-info}{p.}{structtheora__info} structure. 
+
+All values within the given \doxyref{theora\_\-info}{p.}{structtheora__info} structure are cleared, and associated internal codec setup data is freed. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c}]A \doxyref{theora\_\-info}{p.}{structtheora__info} struct to initialize. \end{description}
+\end{Desc}
+\index{oldfuncs@{oldfuncs}!theora_info_init@{theora\_\-info\_\-init}}
+\index{theora_info_init@{theora\_\-info\_\-init}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void theora\_\-info\_\-init (\bf{theora\_\-info} $\ast$ {\em c})}\label{group__oldfuncs_g3091c87d48f1faba018c5956379a6d90}
+
+
+Initialize a \doxyref{theora\_\-info}{p.}{structtheora__info} structure. 
+
+All values within the given \doxyref{theora\_\-info}{p.}{structtheora__info} structure are initialized, and space is allocated within libtheora for internal codec setup data. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em c}]A \doxyref{theora\_\-info}{p.}{structtheora__info} struct to initialize. \end{description}
+\end{Desc}
+\index{oldfuncs@{oldfuncs}!theora_packet_isheader@{theora\_\-packet\_\-isheader}}
+\index{theora_packet_isheader@{theora\_\-packet\_\-isheader}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int theora\_\-packet\_\-isheader (ogg\_\-packet $\ast$ {\em op})}\label{group__oldfuncs_gb969f9d0407683f0e5abe73d0839a25b}
+
+
+Report whether a theora packet is a header or not This function does no verification beyond checking the header flag bit so it should not be used for bitstream identification; use \doxyref{theora\_\-decode\_\-header()}{p.}{group__oldfuncs_g02915e63c1bd733ee291f577a8b75a82} for that. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em op}]An ogg\_\-packet containing encoded theora data. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Return values:]
+\begin{description}
+\item[{\em 1}]The packet is a header packet \item[{\em 0}]The packet is not a header packet (and so contains frame data)\end{description}
+\end{Desc}
+Thus function was added in the 1.0alpha4 release. \index{oldfuncs@{oldfuncs}!theora_packet_iskeyframe@{theora\_\-packet\_\-iskeyframe}}
+\index{theora_packet_iskeyframe@{theora\_\-packet\_\-iskeyframe}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int theora\_\-packet\_\-iskeyframe (ogg\_\-packet $\ast$ {\em op})}\label{group__oldfuncs_g39ccc8f847a748d7074c926b4fdd12b2}
+
+
+Report whether a theora packet is a keyframe or not. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em op}]An ogg\_\-packet containing encoded theora data. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Return values:]
+\begin{description}
+\item[{\em 1}]The packet contains a keyframe image \item[{\em 0}]The packet is contains an interframe delta \item[{\em -1}]The packet is not an image data packet at all\end{description}
+\end{Desc}
+Thus function was added in the 1.0alpha4 release. \index{oldfuncs@{oldfuncs}!theora_version_number@{theora\_\-version\_\-number}}
+\index{theora_version_number@{theora\_\-version\_\-number}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}ogg\_\-uint32\_\-t theora\_\-version\_\-number (void)}\label{group__oldfuncs_gd181f4b19d455dcc2bef2533530b84c8}
+
+
+Retrieve a 32-bit version number. 
+
+This number is composed of a 16-bit major version, 8-bit minor version and 8 bit sub-version, composed as follows: \small\begin{alltt}
+   (VERSION\_MAJOR<<16) + (VERSION\_MINOR<<8) + (VERSION\_SUB)
+\end{alltt}\normalsize 
+ \begin{Desc}
+\item[Returns:]The version number. \end{Desc}
+\index{oldfuncs@{oldfuncs}!theora_version_string@{theora\_\-version\_\-string}}
+\index{theora_version_string@{theora\_\-version\_\-string}!oldfuncs@{oldfuncs}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ theora\_\-version\_\-string (void)}\label{group__oldfuncs_g5a3da8fd262a60f055f96536eec06df2}
+
+
+Retrieve a human-readable string to identify the encoder vendor and version. 
+
+\begin{Desc}
+\item[Returns:]A version string. \end{Desc}

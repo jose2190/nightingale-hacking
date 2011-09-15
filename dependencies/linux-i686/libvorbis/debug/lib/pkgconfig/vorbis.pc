@@ -1,0 +1,14 @@
+# libvorbis pkg-config source file
+
+prefix=/builds/vendor/sb_linbot01_vendor/build/linux-i686/libvorbis/debug
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: vorbis
+Description: vorbis is the primary Ogg Vorbis library
+Version: 1.2.3
+Requires: ogg
+Conflicts:
+Libs: -L${libdir} -lvorbis -lm
+Cflags: -I${includedir}

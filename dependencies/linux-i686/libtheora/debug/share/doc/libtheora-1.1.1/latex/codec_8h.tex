@@ -1,0 +1,264 @@
+\section{codec.h File Reference}
+\label{codec_8h}\index{codec.h@{codec.h}}
+The shared {\tt libtheoradec} and {\tt libtheoraenc} C API. 
+
+{\tt \#include $<$ogg/ogg.h$>$}\par
+\subsection*{Data Structures}
+\begin{CompactItemize}
+\item 
+struct \bf{th\_\-img\_\-plane}
+\begin{CompactList}\small\item\em A buffer for a single color plane in an uncompressed image. \item\end{CompactList}\item 
+struct \bf{th\_\-info}
+\begin{CompactList}\small\item\em Theora bitstream information. \item\end{CompactList}\item 
+struct \bf{th\_\-comment}
+\begin{CompactList}\small\item\em The comment information. \item\end{CompactList}\item 
+struct \bf{th\_\-quant\_\-ranges}
+\begin{CompactList}\small\item\em A set of {\em qi\/} ranges. \item\end{CompactList}\item 
+struct \bf{th\_\-quant\_\-info}
+\begin{CompactList}\small\item\em A complete set of quantization parameters. \item\end{CompactList}\item 
+struct \bf{th\_\-huff\_\-code}
+\begin{CompactList}\small\item\em A Huffman code for a Theora DCT token. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Return codes}
+\begin{CompactItemize}
+\item 
+\#define \bf{TH\_\-EFAULT}~(-1)
+\begin{CompactList}\small\item\em An invalid pointer was provided. \item\end{CompactList}\item 
+\#define \bf{TH\_\-EINVAL}~(-10)
+\begin{CompactList}\small\item\em An invalid argument was provided. \item\end{CompactList}\item 
+\#define \bf{TH\_\-EBADHEADER}~(-20)
+\begin{CompactList}\small\item\em The contents of the header were incomplete, invalid, or unexpected. \item\end{CompactList}\item 
+\#define \bf{TH\_\-ENOTFORMAT}~(-21)
+\begin{CompactList}\small\item\em The header does not belong to a Theora stream. \item\end{CompactList}\item 
+\#define \bf{TH\_\-EVERSION}~(-22)
+\begin{CompactList}\small\item\em The bitstream version is too high. \item\end{CompactList}\item 
+\#define \bf{TH\_\-EIMPL}~(-23)
+\begin{CompactList}\small\item\em The specified function is not implemented. \item\end{CompactList}\item 
+\#define \bf{TH\_\-EBADPACKET}~(-24)
+\begin{CompactList}\small\item\em There were errors in the video data packet. \item\end{CompactList}\item 
+\#define \bf{TH\_\-DUPFRAME}~(1)
+\begin{CompactList}\small\item\em The decoded packet represented a dropped frame. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Basic shared functions}
+\begin{CompactItemize}
+\item 
+const char $\ast$ \bf{th\_\-version\_\-string} (void)
+\begin{CompactList}\small\item\em Retrieves a human-readable string to identify the library vendor and version. \item\end{CompactList}\item 
+ogg\_\-uint32\_\-t \bf{th\_\-version\_\-number} (void)
+\begin{CompactList}\small\item\em Retrieves the library version number. \item\end{CompactList}\item 
+ogg\_\-int64\_\-t \bf{th\_\-granule\_\-frame} (void $\ast$\_\-encdec, ogg\_\-int64\_\-t \_\-granpos)
+\begin{CompactList}\small\item\em Converts a granule position to an absolute frame index, starting at {\tt 0}. \item\end{CompactList}\item 
+double \bf{th\_\-granule\_\-time} (void $\ast$\_\-encdec, ogg\_\-int64\_\-t \_\-granpos)
+\begin{CompactList}\small\item\em Converts a granule position to an absolute time in seconds. \item\end{CompactList}\item 
+int \bf{th\_\-packet\_\-isheader} (ogg\_\-packet $\ast$\_\-op)
+\begin{CompactList}\small\item\em Determines whether a Theora packet is a header or not. \item\end{CompactList}\item 
+int \bf{th\_\-packet\_\-iskeyframe} (ogg\_\-packet $\ast$\_\-op)
+\begin{CompactList}\small\item\em Determines whether a theora packet is a key frame or not. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Functions for manipulating header data}
+\begin{CompactItemize}
+\item 
+void \bf{th\_\-info\_\-init} (\bf{th\_\-info} $\ast$\_\-info)
+\begin{CompactList}\small\item\em Initializes a \doxyref{th\_\-info}{p.}{structth__info} structure. \item\end{CompactList}\item 
+void \bf{th\_\-info\_\-clear} (\bf{th\_\-info} $\ast$\_\-info)
+\begin{CompactList}\small\item\em Clears a \doxyref{th\_\-info}{p.}{structth__info} structure. \item\end{CompactList}\item 
+void \bf{th\_\-comment\_\-init} (\bf{th\_\-comment} $\ast$\_\-tc)
+\begin{CompactList}\small\item\em Initialize a \doxyref{th\_\-comment}{p.}{structth__comment} structure. \item\end{CompactList}\item 
+void \bf{th\_\-comment\_\-add} (\bf{th\_\-comment} $\ast$\_\-tc, char $\ast$\_\-comment)
+\begin{CompactList}\small\item\em Add a comment to an initialized \doxyref{th\_\-comment}{p.}{structth__comment} structure. \item\end{CompactList}\item 
+void \bf{th\_\-comment\_\-add\_\-tag} (\bf{th\_\-comment} $\ast$\_\-tc, char $\ast$\_\-tag, char $\ast$\_\-val)
+\begin{CompactList}\small\item\em Add a comment to an initialized \doxyref{th\_\-comment}{p.}{structth__comment} structure. \item\end{CompactList}\item 
+char $\ast$ \bf{th\_\-comment\_\-query} (\bf{th\_\-comment} $\ast$\_\-tc, char $\ast$\_\-tag, int \_\-count)
+\begin{CompactList}\small\item\em Look up a comment value by its tag. \item\end{CompactList}\item 
+int \bf{th\_\-comment\_\-query\_\-count} (\bf{th\_\-comment} $\ast$\_\-tc, char $\ast$\_\-tag)
+\begin{CompactList}\small\item\em Look up the number of instances of a tag. \item\end{CompactList}\item 
+void \bf{th\_\-comment\_\-clear} (\bf{th\_\-comment} $\ast$\_\-tc)
+\begin{CompactList}\small\item\em Clears a \doxyref{th\_\-comment}{p.}{structth__comment} structure. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \bf{\_\-O\_\-THEORA\_\-CODEC\_\-H\_\-}~(1)
+\item 
+\#define \bf{TH\_\-NHUFFMAN\_\-TABLES}~(80)
+\begin{CompactList}\small\item\em The number of Huffman tables used by Theora. \item\end{CompactList}\item 
+\#define \bf{TH\_\-NDCT\_\-TOKENS}~(32)
+\begin{CompactList}\small\item\em The number of DCT token values in each table. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Typedefs}
+\begin{CompactItemize}
+\item 
+typedef \bf{th\_\-img\_\-plane} \bf{th\_\-ycbcr\_\-buffer} [3]
+\begin{CompactList}\small\item\em A complete image buffer for an uncompressed frame. \item\end{CompactList}\item 
+typedef unsigned char \bf{th\_\-quant\_\-base} [64]
+\begin{CompactList}\small\item\em A single base matrix. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Enumerations}
+\begin{CompactItemize}
+\item 
+enum \bf{th\_\-colorspace} \{ \bf{TH\_\-CS\_\-UNSPECIFIED}, 
+\bf{TH\_\-CS\_\-ITU\_\-REC\_\-470M}, 
+\bf{TH\_\-CS\_\-ITU\_\-REC\_\-470BG}, 
+\bf{TH\_\-CS\_\-NSPACES}
+ \}
+\begin{CompactList}\small\item\em The currently defined color space tags. \item\end{CompactList}\item 
+enum \bf{th\_\-pixel\_\-fmt} \{ \par
+\bf{TH\_\-PF\_\-420}, 
+\bf{TH\_\-PF\_\-RSVD}, 
+\bf{TH\_\-PF\_\-422}, 
+\bf{TH\_\-PF\_\-444}, 
+\par
+\bf{TH\_\-PF\_\-NFORMATS}
+ \}
+\begin{CompactList}\small\item\em The currently defined pixel format tags. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+The shared {\tt libtheoradec} and {\tt libtheoraenc} C API. 
+
+You don't need to include this directly. 
+
+\subsection{Define Documentation}
+\index{codec.h@{codec.h}!_O_THEORA_CODEC_H_@{\_\-O\_\-THEORA\_\-CODEC\_\-H\_\-}}
+\index{_O_THEORA_CODEC_H_@{\_\-O\_\-THEORA\_\-CODEC\_\-H\_\-}!codec.h@{codec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-O\_\-THEORA\_\-CODEC\_\-H\_\-~(1)}\label{codec_8h_15352a6a862d25ab00a8f06ea65ee75b}
+
+
+\index{codec.h@{codec.h}!TH_DUPFRAME@{TH\_\-DUPFRAME}}
+\index{TH_DUPFRAME@{TH\_\-DUPFRAME}!codec.h@{codec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TH\_\-DUPFRAME~(1)}\label{codec_8h_b10e7b64f17a02707fc9348ea9832d09}
+
+
+The decoded packet represented a dropped frame. 
+
+The player can continue to display the current frame, as the contents of the decoded frame buffer have not changed. \index{codec.h@{codec.h}!TH_EBADHEADER@{TH\_\-EBADHEADER}}
+\index{TH_EBADHEADER@{TH\_\-EBADHEADER}!codec.h@{codec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TH\_\-EBADHEADER~(-20)}\label{codec_8h_f00f7ecc5242d12a717202537324a510}
+
+
+The contents of the header were incomplete, invalid, or unexpected. 
+
+\index{codec.h@{codec.h}!TH_EBADPACKET@{TH\_\-EBADPACKET}}
+\index{TH_EBADPACKET@{TH\_\-EBADPACKET}!codec.h@{codec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TH\_\-EBADPACKET~(-24)}\label{codec_8h_6efb84e9c2213a8840003eee2847b27f}
+
+
+There were errors in the video data packet. 
+
+\index{codec.h@{codec.h}!TH_EFAULT@{TH\_\-EFAULT}}
+\index{TH_EFAULT@{TH\_\-EFAULT}!codec.h@{codec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TH\_\-EFAULT~(-1)}\label{codec_8h_4d8d8e34fc5ec39ffa05d61a310a0407}
+
+
+An invalid pointer was provided. 
+
+\index{codec.h@{codec.h}!TH_EIMPL@{TH\_\-EIMPL}}
+\index{TH_EIMPL@{TH\_\-EIMPL}!codec.h@{codec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TH\_\-EIMPL~(-23)}\label{codec_8h_921c47accc17841f220af5a6afb79efe}
+
+
+The specified function is not implemented. 
+
+\index{codec.h@{codec.h}!TH_EINVAL@{TH\_\-EINVAL}}
+\index{TH_EINVAL@{TH\_\-EINVAL}!codec.h@{codec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TH\_\-EINVAL~(-10)}\label{codec_8h_fbbd9f19fbf292aeb62a37792cecb870}
+
+
+An invalid argument was provided. 
+
+\index{codec.h@{codec.h}!TH_ENOTFORMAT@{TH\_\-ENOTFORMAT}}
+\index{TH_ENOTFORMAT@{TH\_\-ENOTFORMAT}!codec.h@{codec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TH\_\-ENOTFORMAT~(-21)}\label{codec_8h_3dc08a00a9aba231be398f3e31726d9c}
+
+
+The header does not belong to a Theora stream. 
+
+\index{codec.h@{codec.h}!TH_EVERSION@{TH\_\-EVERSION}}
+\index{TH_EVERSION@{TH\_\-EVERSION}!codec.h@{codec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TH\_\-EVERSION~(-22)}\label{codec_8h_c3a45ef2b24f75259258edc481e3a122}
+
+
+The bitstream version is too high. 
+
+\index{codec.h@{codec.h}!TH_NDCT_TOKENS@{TH\_\-NDCT\_\-TOKENS}}
+\index{TH_NDCT_TOKENS@{TH\_\-NDCT\_\-TOKENS}!codec.h@{codec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TH\_\-NDCT\_\-TOKENS~(32)}\label{codec_8h_2a44f48084e76a58cae48fb5d47cd422}
+
+
+The number of DCT token values in each table. 
+
+\index{codec.h@{codec.h}!TH_NHUFFMAN_TABLES@{TH\_\-NHUFFMAN\_\-TABLES}}
+\index{TH_NHUFFMAN_TABLES@{TH\_\-NHUFFMAN\_\-TABLES}!codec.h@{codec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TH\_\-NHUFFMAN\_\-TABLES~(80)}\label{codec_8h_49bf449eae33c5320f0c308f32c6ae42}
+
+
+The number of Huffman tables used by Theora. 
+
+
+
+\subsection{Typedef Documentation}
+\index{codec.h@{codec.h}!th_quant_base@{th\_\-quant\_\-base}}
+\index{th_quant_base@{th\_\-quant\_\-base}!codec.h@{codec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char \bf{th\_\-quant\_\-base}[64]}\label{codec_8h_6a1426d16beef8a311d7f0e9d2e96326}
+
+
+A single base matrix. 
+
+\index{codec.h@{codec.h}!th_ycbcr_buffer@{th\_\-ycbcr\_\-buffer}}
+\index{th_ycbcr_buffer@{th\_\-ycbcr\_\-buffer}!codec.h@{codec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}typedef \bf{th\_\-img\_\-plane} \bf{th\_\-ycbcr\_\-buffer}[3]}\label{codec_8h_343f7cfabad179cc4fe527cf06873f45}
+
+
+A complete image buffer for an uncompressed frame. 
+
+The chroma planes may be decimated by a factor of two in either direction, as indicated by \doxyref{th\_\-info::pixel\_\-fmt}{p.}{structth__info_2301388ef3755c41ab12fd144c1fc54e}. The width and height of the Y' plane must be multiples of 16. They may need to be cropped for display, using the rectangle specified by \doxyref{th\_\-info::pic\_\-x}{p.}{structth__info_5b3f834bcf141564e7bb14f49101870f}, \doxyref{th\_\-info::pic\_\-y}{p.}{structth__info_8aacc575cab2dfe3735001c2ad32aa14}, \doxyref{th\_\-info::pic\_\-width}{p.}{structth__info_5048edf77b141dd3e9a92ca85e317345}, and \doxyref{th\_\-info::pic\_\-height}{p.}{structth__info_775178474283c5990ba73f9ba7f6b88b}. All samples are 8 bits. \begin{Desc}
+\item[Note:]The term YUV often used to describe a colorspace is ambiguous. The exact parameters of the RGB to YUV conversion process aside, in many contexts the U and V channels actually have opposite meanings. To avoid this confusion, we are explicit: the name of the color channels are Y'Cb\-Cr, and they appear in that order, always. The prime symbol denotes that the Y channel is non-linear. Cb and Cr stand for \char`\"{}Chroma blue\char`\"{} and \char`\"{}Chroma red\char`\"{}, respectively. \end{Desc}
+
+
+\subsection{Enumeration Type Documentation}
+\index{codec.h@{codec.h}!th_colorspace@{th\_\-colorspace}}
+\index{th_colorspace@{th\_\-colorspace}!codec.h@{codec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}enum \bf{th\_\-colorspace}}\label{codec_8h_4ce7a695ce353b1582d29b6c1ddf31a0}
+
+
+The currently defined color space tags. 
+
+See {\tt the Theora specification}, Chapter 4, for exact details on the meaning of each of these color spaces. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{TH_CS_UNSPECIFIED@{TH\_\-CS\_\-UNSPECIFIED}!codec.h@{codec.h}}\index{codec.h@{codec.h}!TH_CS_UNSPECIFIED@{TH\_\-CS\_\-UNSPECIFIED}}\item[{\em 
+TH\_\-CS\_\-UNSPECIFIED\label{codec_8h_4ce7a695ce353b1582d29b6c1ddf31a0db9a17a3283c8d490652e507db2427cf}
+}]The color space was not specified at the encoder. 
+
+It may be conveyed by an external means. \index{TH_CS_ITU_REC_470M@{TH\_\-CS\_\-ITU\_\-REC\_\-470M}!codec.h@{codec.h}}\index{codec.h@{codec.h}!TH_CS_ITU_REC_470M@{TH\_\-CS\_\-ITU\_\-REC\_\-470M}}\item[{\em 
+TH\_\-CS\_\-ITU\_\-REC\_\-470M\label{codec_8h_4ce7a695ce353b1582d29b6c1ddf31a01a19346bbfb8192baa4c185df73d3397}
+}]A color space designed for NTSC content. \index{TH_CS_ITU_REC_470BG@{TH\_\-CS\_\-ITU\_\-REC\_\-470BG}!codec.h@{codec.h}}\index{codec.h@{codec.h}!TH_CS_ITU_REC_470BG@{TH\_\-CS\_\-ITU\_\-REC\_\-470BG}}\item[{\em 
+TH\_\-CS\_\-ITU\_\-REC\_\-470BG\label{codec_8h_4ce7a695ce353b1582d29b6c1ddf31a0009021d50836ddb0ec6004a2803775fe}
+}]A color space designed for PAL/SECAM content. \index{TH_CS_NSPACES@{TH\_\-CS\_\-NSPACES}!codec.h@{codec.h}}\index{codec.h@{codec.h}!TH_CS_NSPACES@{TH\_\-CS\_\-NSPACES}}\item[{\em 
+TH\_\-CS\_\-NSPACES\label{codec_8h_4ce7a695ce353b1582d29b6c1ddf31a00fa8ea07f583ee57943520ddb2f6e62e}
+}]The total number of currently defined color spaces. \end{description}
+\end{Desc}
+
+\index{codec.h@{codec.h}!th_pixel_fmt@{th\_\-pixel\_\-fmt}}
+\index{th_pixel_fmt@{th\_\-pixel\_\-fmt}!codec.h@{codec.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}enum \bf{th\_\-pixel\_\-fmt}}\label{codec_8h_5c9e7f2f0c7ed209c9ca3ed0abd328bc}
+
+
+The currently defined pixel format tags. 
+
+See {\tt the Theora specification}, Section 4.4, for details on the precise sample locations. \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{TH_PF_420@{TH\_\-PF\_\-420}!codec.h@{codec.h}}\index{codec.h@{codec.h}!TH_PF_420@{TH\_\-PF\_\-420}}\item[{\em 
+TH\_\-PF\_\-420\label{codec_8h_5c9e7f2f0c7ed209c9ca3ed0abd328bcfed7ad7ee4345930255827bff6055162}
+}]Chroma decimation by 2 in both the X and Y directions (4:2:0). 
+
+The Cb and Cr chroma planes are half the width and half the height of the luma plane. \index{TH_PF_RSVD@{TH\_\-PF\_\-RSVD}!codec.h@{codec.h}}\index{codec.h@{codec.h}!TH_PF_RSVD@{TH\_\-PF\_\-RSVD}}\item[{\em 
+TH\_\-PF\_\-RSVD\label{codec_8h_5c9e7f2f0c7ed209c9ca3ed0abd328bc9e60af0159d42b20806d7eb4a8b833e6}
+}]Currently reserved. \index{TH_PF_422@{TH\_\-PF\_\-422}!codec.h@{codec.h}}\index{codec.h@{codec.h}!TH_PF_422@{TH\_\-PF\_\-422}}\item[{\em 
+TH\_\-PF\_\-422\label{codec_8h_5c9e7f2f0c7ed209c9ca3ed0abd328bc0271d01babf2f51512479f4a6245b9fa}
+}]Chroma decimation by 2 in the X direction (4:2:2). 
+
+The Cb and Cr chroma planes are half the width of the luma plane, but full height. \index{TH_PF_444@{TH\_\-PF\_\-444}!codec.h@{codec.h}}\index{codec.h@{codec.h}!TH_PF_444@{TH\_\-PF\_\-444}}\item[{\em 
+TH\_\-PF\_\-444\label{codec_8h_5c9e7f2f0c7ed209c9ca3ed0abd328bc2ac50ac048ea75501a5e0f99a63c8c86}
+}]No chroma decimation (4:4:4). 
+
+The Cb and Cr chroma planes are full width and full height. \index{TH_PF_NFORMATS@{TH\_\-PF\_\-NFORMATS}!codec.h@{codec.h}}\index{codec.h@{codec.h}!TH_PF_NFORMATS@{TH\_\-PF\_\-NFORMATS}}\item[{\em 
+TH\_\-PF\_\-NFORMATS\label{codec_8h_5c9e7f2f0c7ed209c9ca3ed0abd328bc2d6d78b9df1df086bb60f32f963a31eb}
+}]The total number of currently defined pixel formats. \end{description}
+\end{Desc}
+
